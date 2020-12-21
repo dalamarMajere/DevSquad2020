@@ -8,7 +8,11 @@ class MainScene extends Phaser.Scene {
     }
 
     preload() {
-        game.load.image("theme", "Assets/winter-theme.jpg");
+        this.load.image('theme', 'Assets/winter-theme.jpg');
+    }
+
+    create(){
+        this.image = this.add.image(400,300,'theme')
     }
 
     update() {
