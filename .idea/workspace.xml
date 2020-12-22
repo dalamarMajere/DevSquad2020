@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="Image">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/GameScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="Added MainMenu" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +54,7 @@
       <workItem from="1608575960421" duration="21000" />
       <workItem from="1608575988512" duration="2224000" />
       <workItem from="1608578250128" duration="1912000" />
-      <workItem from="1608650282398" duration="6330000" />
+      <workItem from="1608650282398" duration="6446000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -96,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608580024127</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added MainMenu">
+      <created>1608657402362</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608657402362</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,7 +120,8 @@
     <MESSAGE value="Fix" />
     <MESSAGE value="Obrazek" />
     <MESSAGE value="Image" />
-    <option name="LAST_COMMIT_MESSAGE" value="Image" />
+    <MESSAGE value="Added MainMenu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added MainMenu" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
