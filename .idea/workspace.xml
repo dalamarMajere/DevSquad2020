@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="Image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/GameScene.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +44,7 @@
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scenes" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Assets" />
     </key>
   </component>
@@ -54,7 +58,8 @@
       <updated>1608575958819</updated>
       <workItem from="1608575960421" duration="21000" />
       <workItem from="1608575988512" duration="2224000" />
-      <workItem from="1608578250128" duration="1652000" />
+      <workItem from="1608578250128" duration="1912000" />
+      <workItem from="1608650282398" duration="6330000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -84,11 +89,29 @@
       <option name="project" value="LOCAL" />
       <updated>1608579898656</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Image">
+      <created>1608580024127</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608580024127</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
