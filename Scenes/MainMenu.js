@@ -5,35 +5,52 @@ class MainMenu extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('titleScreen', 'Assets/TitleScreen.png');
-        this.load.image('playButton', 'Assets/PlayButton.png');
-        this.load.image('playButtonHover', 'Assets/PlayButtonHover.png');
+       this.titleScreenImage = this.load.image('titleScreen', 'Assets/TitleScreen.png');
+        this.playButton = this.load.image('playButton', 'Assets/PlayButton.png');
+        this.playButtonHover = this.load.image('playButtonHover', 'Assets/PlayButtonHover.png');
     }
 
     create(){
+        //background
+        this.titleScreen = this.add.image(0,0,'titleScreen');
+        this.titleScreen.setOrigin(0,0);
 
+        //play button
+        this.playButton = this.add.sprite(this.sys.game.config.width/2,this.sys.game.config.height/2,'playButton');
+        this.playButtonWidth = this.playButton.width;
+        this.playButtonHeight = this.playButton.height;
+        this.playButtonPosX = this.playButton.x - this.playButtonWidth/2;
+        this.playButtonPosY = this.playButton.y - this.playButtonHeight/2;
+
+        console.log("Button Data: \n Position:["+this.playButtonPosX+","+this.playButtonPosY+"] \n Dimensions: ["+this.playButtonWidth+","+this.playButtonHeight+"]");
+
+        //click check
+        this.input.on('pointerdown',function(event){
+            if(this.isHovering){
+                this.scene.start('GameScene');
+            }
+        }, this);
     }
 
     update(delta){
-        let drawImage = 'playButton';
-        let playButtonLengthX = 300;
-        let playButtonLengthY = 127;
-        let playButtonPosX = 300 - playButtonLengthX/2;
-        let playButtonPosY = 401 - playButtonLengthY/2;
-        let mousePosX = game.input.mousePointer.x;
-        let mousePosY = game.input.mousePointer.y;
+        //get mouse position
+        this.mousePosX = game.input.mousePointer.x;
+        this.mousePosY = game.input.mousePointer.y;
+        this.isHovering = false
 
-        // if the x position of the mouse is right
-        if(mousePosX > playButtonPosX && mousePosX < playButtonPosX + playButtonLengthX){
-            if(mousePosY > playButtonPosY && mousePosY < playButtonPosY + playButtonLengthY){
-                drawImage='playButtonHover';
-                this.input.on('pointerdown',function(event){
-                    this.scene.start("GameScene")
-                }, this);
+        //check if the mouse is hovering over the play button
+        if(this.mousePosX > this.playButtonPosX && this.mousePosX < this.playButtonPosX + this.playButtonWidth){
+            if(this.mousePosY > this.playButtonPosY && this.mousePosY < this.playButtonPosY + this.playButtonHeight){
+                this.isHovering = true;
             }
         }
-        let titleScreen = this.add.image(300,401,'titleScreen');
-        let playButton = this.add.image(300,401,drawImage);
 
+        //apply texture to the play button
+        if(this.isHovering && this.playButton.texture.key != 'playButtonHover'){
+            this.playButton.setTexture('playButtonHover');
+        }
+        else if(!this.isHovering && this.playButton.texture.key != 'playButton') {
+            this.playButton.setTexture('playButton');
+        }
     }
 }
