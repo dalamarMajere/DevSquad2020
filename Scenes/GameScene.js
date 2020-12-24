@@ -66,9 +66,6 @@ class GameScene extends Phaser.Scene {
         //starting theme
         this.currentTheme = 1;
 
-        //initiate the starting theme
-        this.changeTheme(this.currentTheme);
-
         //for changing the theme
         this.changeTheme = function(number){
             //generate new image references
@@ -93,6 +90,10 @@ class GameScene extends Phaser.Scene {
             }while(coveredHeight < this.sys.game.config.height)
 
         };
+            
+        
+        //initiate the starting theme
+        this.changeTheme(this.currentTheme);
 
         //for getting sprites current lane
         this.getCurrentLane = function(sprite){
