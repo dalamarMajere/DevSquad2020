@@ -95,6 +95,10 @@ class GameScene extends Phaser.Scene {
             }while(coveredHeight < this.sys.game.config.height)
 
         };
+            
+        
+        //initiate the starting theme
+        this.changeTheme(this.currentTheme);
 
         //initiate the starting theme
         this.changeTheme(this.currentTheme);
