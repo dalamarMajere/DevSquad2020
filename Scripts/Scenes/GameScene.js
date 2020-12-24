@@ -136,8 +136,8 @@ class GameScene extends Phaser.Scene {
         this.deltaTime = (time-this.lastTime)/1000;
         this.lastTime = time;
 
-        AddScore();
-        IncreaseDifficulty();
+        AddScore(this);
+        IncreaseDifficulty(this);
 
         //move the background each frame
         for(let i = 0 ; i < this.backgroundSprites.length;i++){
