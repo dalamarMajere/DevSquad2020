@@ -36,6 +36,7 @@ class GameScene extends Phaser.Scene {
     }
 
     /*
+
               4 lanes
     _____________________________
     |lane 0|lane 1|lane 2|lane 3|
@@ -44,19 +45,22 @@ class GameScene extends Phaser.Scene {
 
      */
     create(){
-        //settings
+        this.deltaTime = 0;
+        this.lastTime = 0;
+
+        //setup
         this.amountOfLanes = 4;
         this.startingLine = 2;
-        this.lineOffset = this.sys.game.config.width/this.amountOfLanes;
 
         //spawn player on the middle of designated lane
+        this.lineOffset = this.sys.game.config.width/this.amountOfLanes;
         this.player = this.add.sprite(0, 0,'player');
         this.player.setOrigin(0,0);
         this.player.x = this.lineOffset * this.startingLine + (this.lineOffset-this.player.width)/2
         this.player.y = this.sys.game.config.height - this.player.height;
 
         //make sure the player is on top
-        this.player.setDepth(1);
+        this.player.setDepth(3);
 
         //initiate arrays that hold all the sprites of their type
         this.backgroundSprites = [];
@@ -65,9 +69,6 @@ class GameScene extends Phaser.Scene {
 
         //starting theme
         this.currentTheme = 1;
-
-        //initiate the starting theme
-        this.changeTheme(this.currentTheme);
 
         //for changing the theme
         this.changeTheme = function(number){
@@ -83,6 +84,7 @@ class GameScene extends Phaser.Scene {
 
             //initiate the backgroundSprites array to cover the whole screen at least twice
             let coveredHeight = -this.sys.game.config.height;
+
             do{
                 this.newBgSprite = this.add.sprite(0,coveredHeight,this.currentBackground);
                 this.newBgSprite.setOrigin(0,0);
@@ -93,6 +95,9 @@ class GameScene extends Phaser.Scene {
             }while(coveredHeight < this.sys.game.config.height)
 
         };
+
+        //initiate the starting theme
+        this.changeTheme(this.currentTheme);
 
         //for getting sprites current lane
         this.getCurrentLane = function(sprite){
@@ -122,10 +127,17 @@ class GameScene extends Phaser.Scene {
 
     }
 
-    update(delta) {
+    update(time) {
+        //calculate DeltaTime
+        this.deltaTime = (time-this.lastTime)/1000;
+        this.lastTime = time;
+
+        AddScore();
+        IncreaseDifficulty();
+
         //move the background each frame
         for(let i = 0 ; i < this.backgroundSprites.length;i++){
-            this.backgroundSprites[i].y += 10
+            this.backgroundSprites[i].y += difficulty;
         }
 
         //if the last image rolls off the screen

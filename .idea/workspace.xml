@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="Added MainMenu" />
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="Build the basics of the game">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/MainMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +24,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1lyiuz2e4R64RvQ9ffrSJtwnArn" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,6 +46,8 @@
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
+      <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scripts" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scenes" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Assets" />
     </key>
@@ -55,6 +64,11 @@
       <workItem from="1608575988512" duration="2224000" />
       <workItem from="1608578250128" duration="1912000" />
       <workItem from="1608650282398" duration="6446000" />
+      <workItem from="1608669308779" duration="635000" />
+      <workItem from="1608733121704" duration="5465000" />
+      <workItem from="1608743131830" duration="6412000" />
+      <workItem from="1608764877630" duration="4875000" />
+      <workItem from="1608770788964" duration="104000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -98,7 +112,35 @@
       <option name="project" value="LOCAL" />
       <updated>1608657402362</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added MainMenu">
+      <created>1608669325561</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608669325561</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added MainMenu">
+      <created>1608669334630</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608669334630</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Rebuilt Main Menu to be modular and more efficient">
+      <created>1608739348812</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608739348812</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Build the basics of the game">
+      <created>1608749573183</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1608749573183</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +156,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
@@ -121,7 +164,9 @@
     <MESSAGE value="Obrazek" />
     <MESSAGE value="Image" />
     <MESSAGE value="Added MainMenu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added MainMenu" />
+    <MESSAGE value="Rebuilt Main Menu to be modular and more efficient" />
+    <MESSAGE value="Build the basics of the game" />
+    <option name="LAST_COMMIT_MESSAGE" value="Build the basics of the game" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
