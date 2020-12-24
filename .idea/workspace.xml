@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="Build the basics of the game">
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="Added score and difficulty">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/MainMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +67,7 @@
       <workItem from="1608733121704" duration="5465000" />
       <workItem from="1608743131830" duration="6412000" />
       <workItem from="1608764877630" duration="4875000" />
-      <workItem from="1608770788964" duration="104000" />
+      <workItem from="1608770788964" duration="2749000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -140,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608749573183</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added score and difficulty">
+      <created>1608770960245</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1608770960245</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +172,8 @@
     <MESSAGE value="Added MainMenu" />
     <MESSAGE value="Rebuilt Main Menu to be modular and more efficient" />
     <MESSAGE value="Build the basics of the game" />
-    <option name="LAST_COMMIT_MESSAGE" value="Build the basics of the game" />
+    <MESSAGE value="Added score and difficulty" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added score and difficulty" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

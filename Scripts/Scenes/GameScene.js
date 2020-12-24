@@ -36,7 +36,6 @@ class GameScene extends Phaser.Scene {
     }
 
     /*
-
               4 lanes
     _____________________________
     |lane 0|lane 1|lane 2|lane 3|
@@ -51,76 +50,41 @@ class GameScene extends Phaser.Scene {
         //setup
         this.amountOfLanes = 4;
         this.startingLine = 2;
+        this.laneOffset = this.sys.game.config.width/this.amountOfLanes;
 
-        //spawn player on the middle of designated lane
-        this.lineOffset = this.sys.game.config.width/this.amountOfLanes;
-        this.player = this.add.sprite(0, 0,'player');
-        this.player.setOrigin(0,0);
-        this.player.x = this.lineOffset * this.startingLine + (this.lineOffset-this.player.width)/2
-        this.player.y = this.sys.game.config.height - this.player.height;
+        //createPlayer on lane 0
+        CreatePlayer(this,0);
 
-        //make sure the player is on top
-        this.player.setDepth(3);
+        //set the theme to forest
+        SetTheme(1);
 
         //initiate arrays that hold all the sprites of their type
         this.backgroundSprites = [];
-        //this.enemySprites = [];
-        //this.collectibleSprites = [];
+        this.enemySprites = [];
+        this.collectibleSprites = [];
 
-        //starting theme
-        this.currentTheme = 1;
+        //initiate the backgroundSprites array to cover the whole screen at least twice
+        let coveredHeight = -this.sys.game.config.height;
 
-        //for changing the theme
-        this.changeTheme = function(number){
-            //generate new image references
-            this.currentBackground = number + '_background';
-            this.currentObstacle1 =  number + '_obstacle1';
-            this.currentObstacle2 =  number + '_obstacle2';
-            this.currentEnemy = number + '_enemy';
-            this.currentCollectible =  number + '_collectible';
+        do{
+            console.log(currentBackground);
+            this.newBgSprite = this.add.sprite(0,coveredHeight,currentBackground);
+            this.newBgSprite.setOrigin(0,0);
+            this.backgroundSprites.push(this.newBgSprite);
 
-            //clear the backgroundSprites array
-            this.backgroundSprites = [];
+            coveredHeight += this.newBgSprite.height;
 
-            //initiate the backgroundSprites array to cover the whole screen at least twice
-            let coveredHeight = -this.sys.game.config.height;
-
-            do{
-                this.newBgSprite = this.add.sprite(0,coveredHeight,this.currentBackground);
-                this.newBgSprite.setOrigin(0,0);
-                this.backgroundSprites.push(this.newBgSprite);
-
-                coveredHeight += this.newBgSprite.height;
-
-            }while(coveredHeight < this.sys.game.config.height)
-
-        };
-            
-        
-        //initiate the starting theme
-        this.changeTheme(this.currentTheme);
-
-        //initiate the starting theme
-        this.changeTheme(this.currentTheme);
-
-        //for getting sprites current lane
-        this.getCurrentLane = function(sprite){
-            return Math.floor(sprite.x/this.lineOffset);
-        }
+        }while(coveredHeight < this.sys.game.config.height)
 
         //input
         this.input.keyboard.on('keydown',function(event){
 
             if(event.key == "d" || event.key == "right"){
-                if(this.getCurrentLane(this.player) < this.amountOfLanes-1){
-                    this.player.x += this.lineOffset;
-                }
+                IncreasePlayerLane(this);
             }
 
             if(event.key == "a" || event.key == "left"){
-                if(this.getCurrentLane(this.player) > 0){
-                    this.player.x -= this.lineOffset;
-                }
+                DecreasePlayerLane(this);
             }
 
             if(event.key == "p"){
