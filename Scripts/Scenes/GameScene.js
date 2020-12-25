@@ -4,34 +4,34 @@ class GameScene extends Phaser.Scene {
     }
 
     preload() {
-        //normal - forest?
-        this.playerImg = this.load.image('player', 'Assets/player.jpg');
-        this.load.image('1_background', 'Assets/winter-theme.jpg');
-        this.load.image('1_obstacle1', 'Assets/winter-theme.jpg');
-        this.load.image('1_obstacle2', 'Assets/winter-theme.jpg');
-        this.load.image('1_enemy1', 'Assets/winter-theme.jpg');
-        this.load.image('1_collectible', 'Assets/winter-theme.jpg');
-
         //winter
-        this.load.image('2_background', 'Assets/winter-theme.jpg');
-        this.load.image('2_obstacle1', 'Assets/winter-theme.jpg');
-        this.load.image('2_obstacle2', 'Assets/winter-theme.jpg');
-        this.load.image('2_enemy1', 'Assets/winter-theme.jpg');
-        this.load.image('2_collectible', 'Assets/winter-theme.jpg');
+        this.playerImg = this.load.image('player', 'Assets/player.jpg');
+        this.load.image('1_background', 'Assets/snow-theme.png');
+        this.load.image('1_obstacle1', 'Assets/snow-theme.png');
+        this.load.image('1_obstacle2', 'Assets/snow-theme.png');
+        this.load.image('1_enemy1', 'Assets/snow-theme.png');
+        this.load.image('1_collectible', 'Assets/coffee.png');
+
+        //forest
+        this.load.image('2_background', 'Assets/snow-theme.png');
+        this.load.image('2_obstacle1', 'Assets/snow-theme.png');
+        this.load.image('2_obstacle2', 'Assets/snow-theme.png');
+        this.load.image('2_enemy1', 'Assets/snow-theme.png');
+        this.load.image('2_collectible', 'Assets/snow-theme.png');
 
         //lava
-        this.load.image('3_background', 'Assets/winter-theme.jpg');
-        this.load.image('3_obstacle1', 'Assets/winter-theme.jpg');
-        this.load.image('3_obstacle2', 'Assets/winter-theme.jpg');
-        this.load.image('3_enemy1', 'Assets/winter-theme.jpg');
-        this.load.image('3_collectible', 'Assets/winter-theme.jpg');
+        this.load.image('3_background', 'Assets/snow-theme.png');
+        this.load.image('3_obstacle1', 'Assets/snow-theme.png');
+        this.load.image('3_obstacle2', 'Assets/snow-theme.png');
+        this.load.image('3_enemy1', 'Assets/snow-theme.png');
+        this.load.image('3_collectible', 'Assets/snow-theme.png');
 
         //space
-        this.load.image('4_background', 'Assets/winter-theme.jpg');
-        this.load.image('4_obstacle1', 'Assets/winter-theme.jpg');
-        this.load.image('4_obstacle2', 'Assets/winter-theme.jpg');
-        this.load.image('4_enemy1', 'Assets/winter-theme.jpg');
-        this.load.image('4_collectible', 'Assets/winter-theme.jpg');
+        this.load.image('4_background', 'Assets/snow-theme.png');
+        this.load.image('4_obstacle1', 'Assets/snow-theme.png');
+        this.load.image('4_obstacle2', 'Assets/snow-theme.png');
+        this.load.image('4_enemy1', 'Assets/snow-theme.png');
+        this.load.image('4_collectible', 'Assets/snow-theme.png');
 
     }
 
@@ -44,6 +44,7 @@ class GameScene extends Phaser.Scene {
 
      */
     create(){
+
         this.deltaTime = 0;
         this.lastTime = 0;
 
@@ -53,7 +54,8 @@ class GameScene extends Phaser.Scene {
         this.laneOffset = this.sys.game.config.width/this.amountOfLanes;
 
         //createPlayer on lane 0
-        CreatePlayer(this,0);
+        CreatePlayer(this, 0);
+
 
         //set the theme to forest
         SetTheme(1);
@@ -64,34 +66,17 @@ class GameScene extends Phaser.Scene {
         this.collectibleSprites = [];
 
         //initiate the backgroundSprites array to cover the whole screen at least twice
-        let coveredHeight = -this.sys.game.config.height;
-
-        do{
-            console.log(currentBackground);
-            this.newBgSprite = this.add.sprite(0,coveredHeight,currentBackground);
-            this.newBgSprite.setOrigin(0,0);
-            this.backgroundSprites.push(this.newBgSprite);
-
-            coveredHeight += this.newBgSprite.height;
-
-        }while(coveredHeight < this.sys.game.config.height)
+        this.createBackground();
 
         //input
-        this.input.keyboard.on('keydown',function(event){
+        this.inputManager();
 
-            if(event.key == "d" || event.key == "right"){
-                IncreasePlayerLane(this);
-            }
+        this.createItem(); //#TODO: automatize item creating
 
-            if(event.key == "a" || event.key == "left"){
-                DecreasePlayerLane(this);
-            }
-
-            if(event.key == "p"){
-                this.scene.start("MainMenu");
-            }
-
-        }, this);
+        /*this.coffee = this.add.sprite(0, 0, currentCollectible);
+        this.coffee.setOrigin(0,0);
+        this.coffee.scale = 2;
+        this.collectibleSprites.push(this.coffee);*/
 
     }
 
@@ -103,6 +88,68 @@ class GameScene extends Phaser.Scene {
         AddScore(this);
         IncreaseDifficulty(this);
 
+        this.moveBackground();
+        this.moveCollectible();
+
+        for (let i of this.collectibleSprites) {
+            if (i.y + i.height / 2 >= player.y - player.height && i.lane == currentLane) {
+                this.collect(i);
+                this.collectibleSprites.remove(i);
+            }
+            //#TODO: check if sprite run out from the field
+            //and delete it
+        }
+
+        //#TODO: check out energy level and change it or finish the game
+
+        //game.physics.arcadePhysics.overlap(player, this.collectibleSprites[0], print);
+    }
+
+    collect(item) {
+        AddScore(this);
+        //delete sprite with animation
+        //increase energy level
+    }
+
+    createItem() {
+        let clane = Phaser.Math.Between(0, this.amountOfLanes - 1); //#TODO: collectible doesnt exists wtf?
+        let item = new collectible(clane,this.physics.add.sprite(0, 0, currentCollectible));
+        item.setOrigin(0, 0);
+        item.setDepth(1);
+        item.scale = 3;
+
+        item.x = this.laneOffset * clane + (this.laneOffset - item.width) / 2;
+        item.y = item.height / 2;
+
+        console.log(item.x + " " + item.y);
+
+        this.collectibleSprites.push(item);
+        //item.body = enable;
+       // item.physicsBodyType = Phaser.Physics.Arcade;
+        //game.physics.enable(item, Phaser.Physics.ARCADE, true)  #TODO: why physics doesn't work?
+    }
+
+    createBackground() {
+        let coveredHeight = -3200; //#TODO: change to const
+
+        do{
+            console.log(currentBackground);
+            this.newBgSprite = this.add.sprite(0,coveredHeight,currentBackground);
+            this.newBgSprite.setOrigin(0,0);
+            this.backgroundSprites.push(this.newBgSprite);
+
+            coveredHeight += this.newBgSprite.height;
+
+        }while(coveredHeight < this.sys.game.config.height)
+    }
+
+    moveCollectible() {
+        for (let i of this.collectibleSprites) {
+            i.y += difficulty;
+        }
+    }
+
+    moveBackground() {
         //move the background each frame
         for(let i = 0 ; i < this.backgroundSprites.length;i++){
             this.backgroundSprites[i].y += difficulty;
@@ -117,6 +164,25 @@ class GameScene extends Phaser.Scene {
             //place it at the start of the array
             this.backgroundSprites.unshift(shift);
         }
+    }
+
+    inputManager()
+    {
+        this.input.keyboard.on('keydown',function(event){
+
+            if(event.key === "d" || event.key == "right"){ //#TODO: right and left keys
+                IncreasePlayerLane(this);
+            }
+
+            if(event.key === "a" || event.key == "left"){
+                DecreasePlayerLane(this);
+            }
+
+            if(event.key === "p"){
+                this.scene.start("MainMenu");
+            }
+
+        }, this);
     }
 
 }

@@ -7,7 +7,7 @@ function CreatePlayer(scene,lane){
     player.setOrigin(0,0);
     //make sure the player is on top
     player.setDepth(1);
-
+    //game.physics.arcadePhysics.enable(player);
     SetPlayerLane(scene,lane);
 
 }

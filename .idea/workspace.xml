@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="Added score and difficulty">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1lyiuz2e4R64RvQ9ffrSJtwnArn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -45,10 +50,11 @@
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Scripts\Scenes" />
+      <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Assets" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scripts" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scenes" />
-      <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Assets" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -68,6 +74,7 @@
       <workItem from="1608743131830" duration="6412000" />
       <workItem from="1608764877630" duration="4875000" />
       <workItem from="1608770788964" duration="2749000" />
+      <workItem from="1608819539486" duration="11156000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
