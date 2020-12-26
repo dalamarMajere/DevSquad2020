@@ -20,13 +20,13 @@ class GameScene extends Phaser.Scene {
     }
 
     preload() {
-        //game.load.json('version', 'http://phaser.io/version.json');
 
         //winter
         this.playerImg = this.load.image('player', 'Assets/player.jpg');
         this.load.image('1_background', 'Assets/snow-theme.png');
-        this.load.image('1_obstacle1', 'Assets/coffee.png');
-        this.load.image('1_obstacle2', 'Assets/coffee.png');
+        this.load.image('1_obstacle1', 'Assets/fence.png');
+        this.load.image('1_obstacle2', 'Assets/fence.png');
+        //#TODO: animate coffee
         this.load.image('1_enemy', 'Assets/coffee.png');
         this.load.image('1_collectible', 'Assets/coffee.png');
         this.load.atlas('1_energy', 'Assets/tmp.png', 'Assets/tmp.json');
@@ -83,6 +83,7 @@ class GameScene extends Phaser.Scene {
 
         MoveBackgroundOverTime();
         IncreaseDifficultyOverTime();
+        DecreaseEnergyOverTime();
         HandleSpawning();
         this.energySprite.setFrame(GetCurrentFrame());
 
@@ -95,7 +96,6 @@ class GameScene extends Phaser.Scene {
         //check if the player collided with the closest object
         lanes[GetCurrentPlayerLane()].CheckCollision();
 
-        //#TODO: check out energy level and change it or finish the game
     }
 
 

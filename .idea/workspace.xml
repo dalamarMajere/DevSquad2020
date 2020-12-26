@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="- Energy bar (temperature)&#10;- New assets (coffee, temperature indicator and its json version)&#10;- Few fixes">
-      <change afterPath="$PROJECT_DIR$/Assets/tmp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/tmp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/energy.js" afterDir="false" />
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time">
+      <change afterPath="$PROJECT_DIR$/Assets/fence.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/coffee.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/coffee.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phaser/phaser.js" beforeDir="false" afterPath="$PROJECT_DIR$/Phaser/phaser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/background.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/difficulty.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/difficulty.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/energy.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/energy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/gameObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/gameObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/lane.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/lane.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/spawner.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/spawner.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +82,8 @@
       <workItem from="1608933081983" duration="1787000" />
       <workItem from="1608934955038" duration="936000" />
       <workItem from="1608990521043" duration="6088000" />
-      <workItem from="1609003186457" duration="8653000" />
+      <workItem from="1609003186457" duration="9063000" />
+      <workItem from="1609022811135" duration="4023000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -172,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608995428504</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="- Energy bar (temperature)&#10;- New assets (coffee, temperature indicator and its json version)&#10;- Few fixes">
+      <created>1609018808965</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1609018808965</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,14 +206,15 @@
     <MESSAGE value="Built collision detection and lane system" />
     <MESSAGE value="- Energy bar (temperature)&#10;- New assets (coffee, temperature indicator and its json version)" />
     <MESSAGE value="- Energy bar (temperature)&#10;- New assets (coffee, temperature indicator and its json version)&#10;- Few fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Energy bar (temperature)&#10;- New assets (coffee, temperature indicator and its json version)&#10;- Few fixes" />
+    <MESSAGE value="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time" />
+    <option name="LAST_COMMIT_MESSAGE" value="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Scripts/gameObject.js</url>
-          <line>21</line>
+          <line>22</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

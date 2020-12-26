@@ -6,6 +6,7 @@ class gameObject{
 
         switch (this.objectType){
             case "collectible":
+                collectibleAmount++;
                 this.objectSprite = mainScene.add.sprite(x, 0, currentCollectibleImage);
                 break;
             case "enemy":
@@ -49,7 +50,7 @@ class gameObject{
             case "obstacle":
                 //if its an obstacle end the game
                 DecreaseEnergyLevel();
-                //mainScene.scene.start("MainMenu");
+                this.Destroy();
                 break;
             default:
                 break;
@@ -58,6 +59,8 @@ class gameObject{
 
     Destroy(){
         this.objectSprite.destroy();
+        if (this.objectType == 'collectible')
+            collectibleAmount--;
         //#TODO: destroy the object itself, not only the sprite
     }
 }

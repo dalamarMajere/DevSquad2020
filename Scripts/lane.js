@@ -28,6 +28,7 @@ class lane {
 
         //place it at the top
         this.gameObjects.unshift(obj);
+        console.log(this.gameObjects.length);
     }
 
     RemoveObjectFromTop() {
