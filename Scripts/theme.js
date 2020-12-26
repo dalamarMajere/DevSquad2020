@@ -1,15 +1,15 @@
 //for changing the theme
-let currentBackground = '1_background';
-let currentObstacle1 =  '1_obstacle1';
-let currentObstacle2 =  '1_obstacle2';
-let currentEnemy = '1_enemy';
-let currentCollectible = '1_collectible';
+let currentBackgroundImage = '1_background';
+let currentObstacle1Image =  '1_obstacle1';
+let currentObstacle2Image =  '1_obstacle2';
+let currentEnemyImage = '1_enemy';
+let currentCollectibleImage = '1_collectible';
 
- function SetTheme(number){
+function SetTheme(number){
     //generate new image references
-     currentBackground = number + '_background';
-     currentObstacle1 =  number + '_obstacle1';
-     currentObstacle2 =  number + '_obstacle2';
-     currentEnemy = number + '_enemy';
-     currentCollectible =  number + '_collectible';
+     currentBackgroundImage = number + '_background';
+     currentObstacle1Image =  number + '_obstacle1';
+     currentObstacle2Image =  number + '_obstacle2';
+     currentEnemyImage = number + '_enemy';
+     currentCollectibleImage =  number + '_collectible';
 };

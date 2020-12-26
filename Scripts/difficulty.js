@@ -3,10 +3,10 @@ let difficultyTimer = 0;
 let difficultyIncrease = 0.2;
 let difficultyIncreaseTime = 1;
 
-function IncreaseDifficulty(scene)
+function IncreaseDifficultyOverTime()
 {
     //increase timers
-    difficultyTimer += scene.deltaTime;
+    difficultyTimer += deltaTime;
 
     //increase difficulty
     if(difficultyTimer > difficultyIncreaseTime){

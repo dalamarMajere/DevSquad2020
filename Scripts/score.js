@@ -2,13 +2,12 @@ let score = 0;
 let scoreTimer = 0;
 let scoreIncreaseTime = 1;
 
-function AddScore(scene)
+function AddScoreOverTime(scene)
 {
-    scoreTimer += scene.deltaTime;
+    scoreTimer += deltaTime;
 
     if(scoreTimer > scoreIncreaseTime){
         scoreTimer=0;
         score += 1;
-
     }
 }

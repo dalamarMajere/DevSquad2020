@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="- New assets&#10;- The basics of the collectible proceeding&#10;- New theme (winter)&#10;- Reorganize space in the GameScene.update for">
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="Added score and difficulty">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/collectible.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/difficulty.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/difficulty.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/score.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/score.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,10 +54,10 @@
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scripts" />
       <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Scripts\Scenes" />
       <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Assets" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
-      <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scripts" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scenes" />
     </key>
   </component>
@@ -71,7 +78,11 @@
       <workItem from="1608743131830" duration="6412000" />
       <workItem from="1608764877630" duration="4875000" />
       <workItem from="1608770788964" duration="2749000" />
-      <workItem from="1608819539486" duration="12468000" />
+      <workItem from="1608819539486" duration="11156000" />
+      <workItem from="1608908733679" duration="12593000" />
+      <workItem from="1608933081983" duration="1787000" />
+      <workItem from="1608934955038" duration="936000" />
+      <workItem from="1608990521043" duration="4825000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -150,14 +161,7 @@
       <option name="project" value="LOCAL" />
       <updated>1608770960245</updated>
     </task>
-    <task id="LOCAL-00012" summary="- New assets&#10;- The basics of the collectible proceeding&#10;- New theme (winter)&#10;- Reorganize space in the GameScene.update for">
-      <created>1608907881374</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1608907881374</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,8 +188,7 @@
     <MESSAGE value="Rebuilt Main Menu to be modular and more efficient" />
     <MESSAGE value="Build the basics of the game" />
     <MESSAGE value="Added score and difficulty" />
-    <MESSAGE value="- New assets&#10;- The basics of the collectible proceeding&#10;- New theme (winter)&#10;- Reorganize space in the GameScene.update for" />
-    <option name="LAST_COMMIT_MESSAGE" value="- New assets&#10;- The basics of the collectible proceeding&#10;- New theme (winter)&#10;- Reorganize space in the GameScene.update for" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added score and difficulty" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
