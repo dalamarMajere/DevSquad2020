@@ -1,43 +1,45 @@
 let player;
-let currentLane;
 
-function CreatePlayer(scene,lane){
+function CreatePlayer(lane){
     //create player
-    player = scene.add.sprite(0, 0,'player');
+    player = mainScene.add.sprite(0, 0,'player');
     player.setOrigin(0,0);
     //make sure the player is on top
     player.setDepth(1);
-    //game.physics.arcadePhysics.enable(player);
-    SetPlayerLane(scene,lane);
+    //scene.game.physics.arcadePhysics.enable(player);
+    SetPlayerLane(lane);
 
 }
 
-function IncreasePlayerLane(scene,number){
+function IncreasePlayerLane(){
     if(player!=null){
-        if(GetCurrentPlayerLane(scene) < scene.amountOfLanes-1){
-            player.x += scene.laneOffset;
+        if(GetCurrentPlayerLane() < amountOfLanes-1){
+            player.x += laneOffset;
         }
     }
 }
 
-function DecreasePlayerLane(scene){
+function DecreasePlayerLane(){
     if(player!=null){
-        if(GetCurrentPlayerLane(scene) > 0){
-            player.x -= scene.laneOffset;
+        if(GetCurrentPlayerLane() > 0){
+            player.x -= laneOffset;
         }
     }
 }
 
-function SetPlayerLane(scene,index){
+function SetPlayerLane(index){
     if(player!= null){
-        player.x = scene.laneOffset * index + (scene.laneOffset-player.width)/2
-        player.y = scene.sys.game.config.height - player.height;
+
+        if(index >= 0 && index < amountOfLanes){
+            player.x = laneOffset * index + (laneOffset-player.width)/2
+            player.y = windowHeight - player.height;
+        }
     }
 }
 
-function GetCurrentPlayerLane(scene){
+function GetCurrentPlayerLane(){
     if(player!= null){
-        return Math.floor(player.x/scene.laneOffset);
+        return Math.floor(player.x/laneOffset);
     }
 }
 

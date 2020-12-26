@@ -5,8 +5,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/collectible.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/difficulty.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/difficulty.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/score.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/score.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,10 +54,10 @@
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scripts" />
       <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Scripts\Scenes" />
       <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Assets" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
-      <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scripts" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scenes" />
     </key>
   </component>
@@ -75,6 +79,10 @@
       <workItem from="1608764877630" duration="4875000" />
       <workItem from="1608770788964" duration="2749000" />
       <workItem from="1608819539486" duration="11156000" />
+      <workItem from="1608908733679" duration="12593000" />
+      <workItem from="1608933081983" duration="1787000" />
+      <workItem from="1608934955038" duration="936000" />
+      <workItem from="1608990521043" duration="4825000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
