@@ -45,7 +45,8 @@ class lane {
         if (this.gameObjects.length > 0) {
             let closestObject = this.gameObjects[this.gameObjects.length - 1];
             if (player.y - closestObject.objectSprite.y < closestObject.objectSprite.height) {
-                this.RemoveObjectFromTop();
+                closestObject.CollisionWithPlayer();
+                this.gameObjects.pop();
             }
         }
     }
