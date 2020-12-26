@@ -1,5 +1,5 @@
 let player;
-let currentLane;
+//let currentLane;
 
 function CreatePlayer(lane){
     //create player
@@ -16,7 +16,7 @@ function IncreasePlayerLane(){
     if(player!=null){
         if(GetCurrentPlayerLane() < amountOfLanes-1){
             player.x += laneOffset;
-            currentLane++;
+            //currentLane++;
         }
     }
 }
@@ -25,7 +25,7 @@ function DecreasePlayerLane(){
     if(player!=null){
         if(GetCurrentPlayerLane() > 0){
             player.x -= laneOffset;
-            currentLane--;
+            //currentLane--;
         }
     }
 }
@@ -36,15 +36,15 @@ function SetPlayerLane(index){
         if(index >= 0 && index < amountOfLanes){
             player.x = laneOffset * index + (laneOffset-player.width)/2
             player.y = windowHeight - player.height;
-            currentlane = index;
+            //currentlane = index;
         }
     }
 }
 
 function GetCurrentPlayerLane(){
-    /*if(player!= null){
+    if(player!= null){
         return Math.floor(player.x/laneOffset);
-    }*/
-    return currentLane;
+    }
+    //return currentLane;
 }
 

@@ -1,4 +1,4 @@
-let backgroundSprites = [];
+    let backgroundSprites = [];
 
 function CreateBackground() {
     backgroundSprites = [];

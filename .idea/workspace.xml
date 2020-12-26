@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="Built collision detection and lane system">
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="- Energy bar (temperature)&#10;- New assets (coffee, temperature indicator and its json version)&#10;- Few fixes">
+      <change afterPath="$PROJECT_DIR$/Assets/tmp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/tmp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/energy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/lane.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/lane.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/spawner.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/spawner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/coffee.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/coffee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phaser/phaser.js" beforeDir="false" afterPath="$PROJECT_DIR$/Phaser/phaser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/difficulty.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/difficulty.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/gameObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/gameObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +32,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
-  </component>
   <component name="ProjectId" id="1lyiuz2e4R64RvQ9ffrSJtwnArn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -38,19 +45,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/phaser.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Assets" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Assets" />
+      <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Phaser" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Assets" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scripts" />
       <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Scripts\Scenes" />
-      <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Assets" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scenes" />
     </key>
@@ -77,6 +86,7 @@
       <workItem from="1608933081983" duration="1787000" />
       <workItem from="1608934955038" duration="936000" />
       <workItem from="1608990521043" duration="6088000" />
+      <workItem from="1609003186457" duration="8653000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -190,7 +200,9 @@
     <MESSAGE value="Build the basics of the game" />
     <MESSAGE value="Added score and difficulty" />
     <MESSAGE value="Built collision detection and lane system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Built collision detection and lane system" />
+    <MESSAGE value="- Energy bar (temperature)&#10;- New assets (coffee, temperature indicator and its json version)" />
+    <MESSAGE value="- Energy bar (temperature)&#10;- New assets (coffee, temperature indicator and its json version)&#10;- Few fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Energy bar (temperature)&#10;- New assets (coffee, temperature indicator and its json version)&#10;- Few fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -198,7 +210,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Scripts/gameObject.js</url>
           <line>21</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

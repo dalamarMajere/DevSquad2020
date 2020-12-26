@@ -13,7 +13,7 @@ class gameObject{
                 break;
             case "obstacle":
                 let index = Phaser.Math.Between(1, 2);
-                if(index = 1){
+                if(index === 1){
                     this.objectSprite = mainScene.add.sprite(x, 0, currentObstacle1Image);
                 }
                 else{
@@ -39,6 +39,7 @@ class gameObject{
             case "collectible":
                 //if its a collectible add points, and destroy the object
                 score += pointsForCollecting;
+                IncreaseEnergyLevel();
                 this.Destroy();
                 break;
             case "enemy":
@@ -47,7 +48,8 @@ class gameObject{
                 break;
             case "obstacle":
                 //if its an obstacle end the game
-                mainScene.scene.start("MainMenu");
+                DecreaseEnergyLevel();
+                //mainScene.scene.start("MainMenu");
                 break;
             default:
                 break;

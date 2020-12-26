@@ -20,6 +20,8 @@ class GameScene extends Phaser.Scene {
     }
 
     preload() {
+        //game.load.json('version', 'http://phaser.io/version.json');
+
         //winter
         this.playerImg = this.load.image('player', 'Assets/player.jpg');
         this.load.image('1_background', 'Assets/snow-theme.png');
@@ -27,6 +29,7 @@ class GameScene extends Phaser.Scene {
         this.load.image('1_obstacle2', 'Assets/coffee.png');
         this.load.image('1_enemy', 'Assets/coffee.png');
         this.load.image('1_collectible', 'Assets/coffee.png');
+        this.load.atlas('1_energy', 'Assets/tmp.png', 'Assets/tmp.json');
 
         //forest
         this.load.image('2_background', 'Assets/snow-theme.png');
@@ -68,6 +71,9 @@ class GameScene extends Phaser.Scene {
         CreateBackground();
         this.inputManager();
 
+        this.energySprite = this.add.sprite(200, 35, '1_energy');
+        this.energySprite.scale = 1.5;
+        this.energySprite.setFrame("19.png");
     }
 
     update(time) {
@@ -78,6 +84,7 @@ class GameScene extends Phaser.Scene {
         MoveBackgroundOverTime();
         IncreaseDifficultyOverTime();
         HandleSpawning();
+        this.energySprite.setFrame(GetCurrentFrame());
 
         //for all the lanes
         for (let l of lanes) {
@@ -96,11 +103,11 @@ class GameScene extends Phaser.Scene {
     {
         this.input.keyboard.on('keydown',function(event){
 
-            if(event.key === "d" || event.key == "right"){ //#TODO: right and left keys
+            if(event.key === "d" || event.key === "right"){ //#TODO: right and left keys
                 IncreasePlayerLane();
             }
 
-            if(event.key === "a" || event.key == "left"){
+            if(event.key === "a" || event.key === "left"){
                 DecreasePlayerLane();
             }
 
