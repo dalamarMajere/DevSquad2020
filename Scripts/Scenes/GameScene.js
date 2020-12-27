@@ -73,18 +73,8 @@ class GameScene extends Phaser.Scene {
         SetTheme(1);
         CreateBackground();
         this.inputManager();
-
-        //initiate scoreboard
-        this.scoreboard = this.add.sprite(0,0,'scoreboard');
-        this.scoreboard.setDepth(4);
-        this.scoreboard.setScale(1.5);
-        this.scoreboard.setOrigin(0,0);
-        this.scoreText = this.add.text(400,32,score.toString(),{ fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif' });
-        this.scoreText.setDepth(5);
-        this.energySprite = this.add.sprite(175, 32, '1_energy');
-        this.energySprite.scale = 1.5;
-        this.energySprite.setFrame("19.png");
-        this.energySprite.setDepth(5);
+        CreateScore();
+        CreateEnergy();
     }
 
     update(time) {
@@ -99,7 +89,7 @@ class GameScene extends Phaser.Scene {
         HandleSpawning();
         UpdateScore();
 
-        this.energySprite.setFrame(GetCurrentFrame());
+        energySprite.setFrame(GetCurrentFrame());
 
         //for all the lanes
         for (let l of lanes) {

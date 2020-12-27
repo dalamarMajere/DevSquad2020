@@ -8,13 +8,11 @@ class gameObject{
             case "collectible":
                 collectibleAmount++;
                 this.objectSprite = mainScene.physics.add.sprite(x, 0, currentCollectibleImage);
-                console.log("y of sprite:" + this.objectSprite.y);
-                console.log("y of player:" + player.y);
-                    this.physics.add.collider(player, this.objectSprite);
-                    //game.physics.add.collider(player, this.objectSprite, this.CollisionWithPlayer(), null, this);
+                mainScene.physics.add.overlap(player, this.objectSprite, this.GetCollectible, null, this);
                 break;
             case "enemy":
                 this.objectSprite = mainScene.physics.add.sprite(x, 0, currentEnemyImage);
+                mainScene.physics.add.collider(player, this.objectSprite, gameOver, null, this);
                 break;
             case "obstacle":
                 let index = Phaser.Math.Between(1, 2);
@@ -23,8 +21,8 @@ class gameObject{
                 }
                 else{
                     this.objectSprite = mainScene.physics.add.sprite(x, 0, currentObstacle2Image);
-                    this.objectSprite.scale = 1.5;
                 }
+                mainScene.physics.add.collider(player, this.objectSprite, this.CollisionWithPlayer(), null, this);
                 break;
             default:
                 console.log("No object of "+type+" type");
@@ -43,29 +41,17 @@ class gameObject{
     GetCollectible() {
         score += pointsForCollecting;
         IncreaseEnergyLevel();
+        collectibleAmount--;
         this.Destroy();
     }
 
     CollisionWithPlayer() {
-        switch (this.objectType) {
-            case "enemy":
-                //if its an enemy end the game
-                mainScene.scene.start("MainMenu");
-                break;
-            case "obstacle":
-                //if its an obstacle end the game
-                DecreaseEnergyLevel();
-                this.Destroy();
-                break;
-            default:
-                break;
-        }
+        DecreaseEnergyLevel();
+        this.Destroy();
     }
 
     Destroy(){
         this.objectSprite.destroy();
-        if (this.objectType == 'collectible')
-            collectibleAmount--;
         //#TODO: destroy the object itself, not only the sprite
     }
 }

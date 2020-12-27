@@ -2,6 +2,18 @@ let score = 0;
 let scoreTimer = 0;
 let scoreIncreaseTime = 1;
 
+let scoreboard;
+let scoreText;
+
+function CreateScore() {
+    scoreboard = mainScene.add.sprite(0,0,'scoreboard');
+    scoreboard.setDepth(4);
+    scoreboard.setScale(1.5);
+    scoreboard.setOrigin(0,0);
+    scoreText = mainScene.add.text(400,32,score.toString(),{ fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif' });
+    scoreText.setDepth(5);
+}
+
 function AddScoreOverTime()
 {
     scoreTimer += deltaTime;
@@ -13,5 +25,5 @@ function AddScoreOverTime()
 }
 
 function UpdateScore(){
-    mainScene.scoreText.text = score.toString();
+    scoreText.text = score.toString();
 }

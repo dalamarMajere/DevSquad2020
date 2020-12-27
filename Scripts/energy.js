@@ -6,6 +6,15 @@ let frameSuffix = ".png";
 let energyTimer = 0;
 let energyIncreaseTime = 0.4;
 
+let energySprite;
+
+function CreateEnergy() {
+    energySprite = mainScene.add.sprite(175, 32, '1_energy');
+    energySprite.scale = 1.5;
+    energySprite.setFrame("19.png");
+    energySprite.setDepth(5);
+}
+
 function DecreaseEnergyOverTime() {
     energyTimer += deltaTime;
 
