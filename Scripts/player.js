@@ -14,6 +14,7 @@ function CreatePlayer(lane){
     SetPlayerLane(lane);
 
     player.setBounce(0.2);
+    //player won't go out from the borders
     player.setCollideWorldBounds(true);
 }
 

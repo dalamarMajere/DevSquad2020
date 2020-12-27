@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="- Animated coffee&#10;- Fix player controls&#10;- Some changes in collectible spawning">
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="- Obstacle spawn&#10;- Add ground to collide with falling objects">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/difficulty.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/difficulty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/gameObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/gameObject.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/queue.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/queue.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/spawner.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/spawner.js" afterDir="false" />
@@ -89,7 +88,7 @@
       <workItem from="1609034019661" duration="1138000" />
       <workItem from="1609083702021" duration="2165000" />
       <workItem from="1609086115173" duration="51000" />
-      <workItem from="1609105685203" duration="5279000" />
+      <workItem from="1609105685203" duration="5818000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -210,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609107240392</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="- Obstacle spawn&#10;- Add ground to collide with falling objects">
+      <created>1609111161804</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1609111161804</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +251,8 @@
     <MESSAGE value="- Optimize code (gameScene.create)&#10;- Add physics" />
     <MESSAGE value="Add new physics" />
     <MESSAGE value="- Animated coffee&#10;- Fix player controls&#10;- Some changes in collectible spawning" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Animated coffee&#10;- Fix player controls&#10;- Some changes in collectible spawning" />
+    <MESSAGE value="- Obstacle spawn&#10;- Add ground to collide with falling objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Obstacle spawn&#10;- Add ground to collide with falling objects" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

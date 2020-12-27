@@ -13,6 +13,7 @@ let collectibleWidth = 40;
 let obstacleHeight = 115;
 let obstacleWidth = 70;
 
+//timer to spawn obstacles
 let spawnTimer = 0;
 let spawnTimerIncrease = 0.5;
 
@@ -32,6 +33,8 @@ function HandleSpawning() {
         }
     }
 
+    //so amount of obstacles won't be greater than maximum
+    //and they won't be spawned all by one time
     if (obstacleAmount < maxObstacleAmount && spawnTimer >= spawnTimerIncrease) {
         SpawnObstacle();
         spawnTimer = 0;
@@ -42,6 +45,8 @@ function SpawnObstacle() {
     let x = Phaser.Math.Between(obstacleWidth, windowWidth - obstacleWidth);
 
     //#TODO: it doesn't work
+    //to make sure than new obstacle won't collide with
+    //other objects
     if (Math.abs(x - getTail().objectSprite.x) <= obstacleWidth
     && getTail().objectSprite.y <= obstacleHeight) {
         SpawnObstacle();

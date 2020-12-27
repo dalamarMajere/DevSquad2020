@@ -22,11 +22,13 @@ function IncreaseDifficultyOverTime()
         //#TODO: make better correlation
     }
 
+    //add new obstacle every 5 * difficulty
     if (difficulty / 5 > five) {
         maxObstacleAmount = Math.min(10, maxObstacleAmount + 1);
         five++;
     }
 
+    //decrease obstacle spawn time every 2 * difficulty
     if (difficulty / 2 > two) {
         two++;
         spawnTimerIncrease = Math.max(0.01, spawnTimerIncrease - 0.1   );

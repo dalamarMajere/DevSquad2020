@@ -119,6 +119,7 @@ class GameScene extends Phaser.Scene {
 
     inputManager()
     {
+        //while key is pressed
         this.input.keyboard.on('keydown',function(event){
             if(event.key === "p"){
                 this.scene.start("MainMenu");
@@ -133,6 +134,7 @@ class GameScene extends Phaser.Scene {
 
         }, this);
 
+        //when key is unpressed
         this.input.keyboard.on('keyup', function(event) {
             //to make smoother transition check if "a" doesn't pressed
             if (event.key == "d" && playerMoveRight) { //#TODO: right and left keys
