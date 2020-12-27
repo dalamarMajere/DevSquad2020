@@ -4,7 +4,7 @@ let minFrame = 0;
 let frameSuffix = ".png";
 
 let energyTimer = 0;
-let energyIncreaseTime = 0.4;
+let energyIncreaseTime = 1;
 
 let energySprite;
 
@@ -16,7 +16,7 @@ function CreateEnergy() {
 }
 
 function DecreaseEnergyOverTime() {
-    energyTimer += deltaTime;
+    energyTimer += (deltaTime + difficulty / 10000);
 
     if (energyTimer > energyIncreaseTime) {
         energyTimer = 0;

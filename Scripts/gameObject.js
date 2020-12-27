@@ -9,6 +9,17 @@ class gameObject{
                 collectibleAmount++;
                 this.objectSprite = mainScene.physics.add.sprite(x, 0, currentCollectibleImage);
                 mainScene.physics.add.overlap(player, this.objectSprite, this.GetCollectible, null, this);
+                mainScene.anims.create({
+                    key: '1_animation',
+                    frames: mainScene.anims.generateFrameNames('1_collectible', {
+                        start: 0,
+                        end: 2,
+                        suffix: '.png'
+                    }),
+                    frameRate: 5,
+                    repeat: -1
+                });
+                this.objectSprite.play(currentAnimation);
                 break;
             case "enemy":
                 this.objectSprite = mainScene.physics.add.sprite(x, 0, currentEnemyImage);

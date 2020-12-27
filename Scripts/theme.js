@@ -4,6 +4,7 @@ let currentObstacle1Image =  '1_obstacle1';
 let currentObstacle2Image =  '1_obstacle2';
 let currentEnemyImage = '1_enemy';
 let currentCollectibleImage = '1_collectible';
+let currentAnimation = '1_animation';
 
 function SetTheme(number){
     //generate new image references
@@ -12,4 +13,5 @@ function SetTheme(number){
      currentObstacle2Image =  number + '_obstacle2';
      currentEnemyImage = number + '_enemy';
      currentCollectibleImage =  number + '_collectible';
+     currentAnimation = number + '_animation'
 };

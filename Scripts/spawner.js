@@ -1,7 +1,7 @@
 
 let previousX;
 //offset
-let changeX = 50;
+let changeX = 75;
 let collectibleAmount = 0;
 
 //#TODO
@@ -18,7 +18,7 @@ function HandleSpawning() {
     }
     else {
         //the last object.y >= its.height / 4
-        if (getTail().objectSprite.y >= collectibleHeight / 4) {
+        if (getTail().objectSprite.y >= collectibleHeight / 2) {
             SpawnCollectible();
         }
     }

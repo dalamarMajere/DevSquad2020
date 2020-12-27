@@ -28,6 +28,19 @@ class GameScene extends Phaser.Scene {
         this.load.image('1_obstacle2', 'Assets/winter-tree.png');
         //#TODO: animate coffee
         this.load.image('1_enemy', 'Assets/coffee.png');
+
+        this.load.atlas('1_collectible', 'Assets/coffee_tran_ani.png', 'Assets/coffee_tran_ani.json');
+        /*this.anims.create({
+            key: '1_animation',
+            frames: this.anims.generateFrameNames('1_collectible', {
+                start: 0,
+                end: 2,
+                suffix: '.png'
+            }),
+            frameRate: 5,
+            repeat: -1
+        });*/
+
         this.load.image('1_collectible', 'Assets/coffee.png');
         this.load.atlas('1_energy', 'Assets/tmp.png', 'Assets/tmp.json');
 
@@ -92,12 +105,6 @@ class GameScene extends Phaser.Scene {
         moveQueueForward();
 
         energySprite.setFrame(GetCurrentFrame());
-
-        /*//for all the lanes
-        for (let l of lanes) {
-            l.MoveForward();
-            l.ClearGarbage();
-        }*/
     }
 
 
@@ -107,16 +114,24 @@ class GameScene extends Phaser.Scene {
             if(event.key === "p"){
                 this.scene.start("MainMenu");
             }
-
-        }, this);
-
-        this.input.keyboard.on('keydown', function(event) {
             if (event.key == "d") { //#TODO: right and left keys
-                IncreasePlayerLane();
+                MoveRight();
             }
 
             if(event.key === "a"){
-                DecreasePlayerLane();
+                MoveLeft();
+            }
+
+        }, this);
+
+        this.input.keyboard.on('keyup', function(event) {
+            //to make smoother transition check if "a" doesn't pressed
+            if (event.key == "d" && playerMoveRight) { //#TODO: right and left keys
+                StopPlayer();
+            }
+
+            if(event.key === "a" && !playerMoveRight){
+                StopPlayer();
             }
         }, this);
     }

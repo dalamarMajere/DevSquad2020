@@ -3,6 +3,7 @@ let player;
 let velocity = 200;
 let velocityIncrease = 2;
 
+let playerMoveRight = false;
 
 function CreatePlayer(lane){
     //create player
@@ -16,15 +17,24 @@ function CreatePlayer(lane){
     player.setCollideWorldBounds(true);
 }
 
-function IncreasePlayerLane(){
+function MoveRight(){
     if(player!=null){
         player.setVelocityX(velocity);
+        playerMoveRight = true;
     }
 }
 
-function DecreasePlayerLane(){
+function MoveLeft(){
     if(player!=null){
         player.setVelocityX(-velocity);
+        playerMoveRight = false;
+    }
+}
+
+function StopPlayer() {
+    if (player != null) {
+        player.setVelocity(0);
+        playerMoveRight = false;
     }
 }
 
