@@ -1,5 +1,9 @@
 let player;
 
+let velocity = 200;
+let velocityIncrease = 2;
+
+
 function CreatePlayer(lane){
     //create player
     player = mainScene.physics.add.sprite(0, 0,'player');
@@ -8,24 +12,23 @@ function CreatePlayer(lane){
     player.setDepth(1);
     SetPlayerLane(lane);
 
+    player.setBounce(0);
+    player.setCollideWorldBounds(true);
 }
 
 function IncreasePlayerLane(){
     if(player!=null){
-        if(GetCurrentPlayerLane() < amountOfLanes-1){
-            player.x += laneOffset;
-        }
+        player.setVelocityX(velocity);
     }
 }
 
 function DecreasePlayerLane(){
     if(player!=null){
-        if(GetCurrentPlayerLane() > 0){
-            player.x -= laneOffset;
-        }
+        player.setVelocityX(-velocity);
     }
 }
 
+//#TODO: rewrite without lanes
 function SetPlayerLane(index){
     if(player!= null){
 
@@ -36,9 +39,4 @@ function SetPlayerLane(index){
     }
 }
 
-function GetCurrentPlayerLane(){
-    if(player!= null){
-        return Math.floor(player.x/laneOffset);
-    }
-}
 

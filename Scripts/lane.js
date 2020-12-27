@@ -8,6 +8,7 @@ class lane {
         lanes.push(this);
     }
 
+    //velocityY
     MoveForward() {
         for (let i = 0; i < this.gameObjects.length; i++) {
             let obj = this.gameObjects[i];
@@ -15,6 +16,7 @@ class lane {
         }
     }
 
+    //AddQueue
     AddObject(type) {
         //create the object
         let obj = new gameObject(type, this.offset);
@@ -41,6 +43,7 @@ class lane {
         }
     }
 
+    //collider
     CheckCollision() {
         if (this.gameObjects.length > 0) {
             let closestObject = this.gameObjects[this.gameObjects.length - 1];

@@ -1,5 +1,6 @@
     let backgroundSprites = [];
 
+
 function CreateBackground() {
     backgroundSprites = [];
 

@@ -1,36 +1,44 @@
 
-let previousItemLane;
+let previousX;
+//offset
+let changeX = 50;
 let collectibleAmount = 0;
 
+//#TODO
 let collectibleHeight = 91;
+let collectibleWidth = 40;
 let obstacleHeight = 115;
 
 function HandleSpawning() {
 
-    //if it's the first call
+    //if it's first call
     if (collectibleAmount === 0) {
-        previousItemLane = Phaser.Math.Between(0, amountOfLanes - 1);
+        previousX = Phaser.Math.Between(collectibleWidth, windowWidth - collectibleWidth);
         SpawnCollectible();
     }
     else {
-        if (lanes[previousItemLane].gameObjects[0].objectSprite.y >= collectibleHeight / 2) {
+        //the last object.y >= its.height / 4
+        if (getTail().objectSprite.y >= collectibleHeight / 4) {
             SpawnCollectible();
         }
     }
 }
 
 function SpawnCollectible() {
-    //generate the new index
+    //generate the new index: right, the same, left
     let index = Phaser.Math.Between(-1, 1);
 
+    let dx = index * changeX;
     //if new index is suitable
-    if (index + previousItemLane >= amountOfLanes ||
-        index + previousItemLane < 0) {
+    if (dx + previousX >= windowWidth - collectibleWidth * 2 ||
+        dx + previousX < collectibleWidth * 2) {
         SpawnCollectible();
         return;
     }
 
-    //add new collectible
-    previousItemLane = previousItemLane + index;
-    lanes[previousItemLane].AddObject("collectible");
+    //update x position
+    previousX += dx;
+
+    //make gameobject and add it to queue
+    addQueue(previousX);
 }

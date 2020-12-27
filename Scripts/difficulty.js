@@ -12,5 +12,8 @@ function IncreaseDifficultyOverTime()
     if(difficultyTimer > difficultyIncreaseTime){
         difficultyTimer = 0;
         difficulty += difficultyIncrease;
+
+        velocity += (velocityIncrease * difficulty);
+        //#TODO: make better correlation
     }
 }

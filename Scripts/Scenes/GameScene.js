@@ -88,37 +88,36 @@ class GameScene extends Phaser.Scene {
         DecreaseEnergyOverTime();
         HandleSpawning();
         UpdateScore();
+        //for now: move all collectible
+        moveQueueForward();
 
         energySprite.setFrame(GetCurrentFrame());
 
-        //for all the lanes
+        /*//for all the lanes
         for (let l of lanes) {
             l.MoveForward();
             l.ClearGarbage();
-        }
-
-        //check if the player collided with the closest object
-        lanes[GetCurrentPlayerLane()].CheckCollision();
-
+        }*/
     }
 
 
     inputManager()
     {
         this.input.keyboard.on('keydown',function(event){
-
-            if(event.key === "d" || event.key === "right"){ //#TODO: right and left keys
-                IncreasePlayerLane();
-            }
-
-            if(event.key === "a" || event.key === "left"){
-                DecreasePlayerLane();
-            }
-
             if(event.key === "p"){
                 this.scene.start("MainMenu");
             }
 
+        }, this);
+
+        this.input.keyboard.on('keydown', function(event) {
+            if (event.key == "d") { //#TODO: right and left keys
+                IncreasePlayerLane();
+            }
+
+            if(event.key === "a"){
+                DecreasePlayerLane();
+            }
         }, this);
     }
 }
