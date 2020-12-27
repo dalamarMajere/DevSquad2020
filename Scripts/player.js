@@ -2,7 +2,7 @@ let player;
 
 function CreatePlayer(lane){
     //create player
-    player = mainScene.add.sprite(0, 0,'player');
+    player = mainScene.physics.add.sprite(0, 0,'player');
     player.setOrigin(0,0);
     //make sure the player is on top
     player.setDepth(1);

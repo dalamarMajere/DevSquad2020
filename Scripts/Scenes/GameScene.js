@@ -66,14 +66,22 @@ class GameScene extends Phaser.Scene {
             new lane(laneOffset * i);
         }
 
+
+
         CreatePlayer(0);
         SetTheme(1);
         CreateBackground();
         this.inputManager();
 
+        //this.physics.add.collider(p, o, this.func, null, this);
+
         this.energySprite = this.add.sprite(200, 35, '1_energy');
         this.energySprite.scale = 1.5;
         this.energySprite.setFrame("19.png");
+    }
+
+    func(player, obstacle) {
+        console.log("COLLIDE");
     }
 
     update(time) {
@@ -111,6 +119,8 @@ class GameScene extends Phaser.Scene {
                 DecreasePlayerLane();
             }
 
+            //#TODO: in menu energy bar and difficulty doesn't change
+            //#TODO: should be updated
             if(event.key === "p"){
                 this.scene.start("MainMenu");
             }
