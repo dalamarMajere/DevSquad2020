@@ -25,7 +25,7 @@ class GameScene extends Phaser.Scene {
         this.playerImg = this.load.image('player', 'Assets/player.jpg');
         this.load.image('1_background', 'Assets/snow-theme.png');
         this.load.image('1_obstacle1', 'Assets/fence.png');
-        this.load.image('1_obstacle2', 'Assets/fence.png');
+        this.load.image('1_obstacle2', 'Assets/winter-tree.png');
         //#TODO: animate coffee
         this.load.image('1_enemy', 'Assets/coffee.png');
         this.load.image('1_collectible', 'Assets/coffee.png');

@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time">
-      <change afterPath="$PROJECT_DIR$/Assets/fence.png" afterDir="false" />
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time&#10;- Clean the code">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/difficulty.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/difficulty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/energy.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/energy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/gameObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/gameObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/lane.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/lane.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/spawner.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/spawner.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +22,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1lyiuz2e4R64RvQ9ffrSJtwnArn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -83,7 +79,8 @@
       <workItem from="1608934955038" duration="936000" />
       <workItem from="1608990521043" duration="6088000" />
       <workItem from="1609003186457" duration="9063000" />
-      <workItem from="1609022811135" duration="4023000" />
+      <workItem from="1609022811135" duration="7119000" />
+      <workItem from="1609034019661" duration="1138000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -176,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609018808965</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time&#10;- Clean the code">
+      <created>1609026988914</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609026988914</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,18 +211,8 @@
     <MESSAGE value="- Energy bar (temperature)&#10;- New assets (coffee, temperature indicator and its json version)" />
     <MESSAGE value="- Energy bar (temperature)&#10;- New assets (coffee, temperature indicator and its json version)&#10;- Few fixes" />
     <MESSAGE value="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time" />
-    <option name="LAST_COMMIT_MESSAGE" value="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/Scripts/gameObject.js</url>
-          <line>22</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time&#10;- Clean the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time&#10;- Clean the code" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

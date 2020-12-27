@@ -19,6 +19,7 @@ class gameObject{
                 }
                 else{
                     this.objectSprite = mainScene.add.sprite(x, 0, currentObstacle2Image);
+                    this.objectSprite.scale = 1.5;
                 }
                 break;
             default:
