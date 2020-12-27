@@ -1,5 +1,3 @@
-let spawnTimer = 0;
-let spawnCooldownTime = 0.4;
 
 let previousItemLane;
 let collectibleAmount = 0;
@@ -9,16 +7,6 @@ let obstacleHeight = 115;
 
 function HandleSpawning() {
 
-    spawnTimer += deltaTime;
-
-    if (spawnTimer > spawnCooldownTime) {
-        spawnCooldownTime -= difficulty / 100;
-        spawnTimer = 0;
-
-        let index = Phaser.Math.Between(0, amountOfLanes - 1);
-        lanes[index].AddObject('obstacle');
-
-    }
     //if it's the first call
     if (collectibleAmount === 0) {
         previousItemLane = Phaser.Math.Between(0, amountOfLanes - 1);
@@ -34,8 +22,6 @@ function HandleSpawning() {
 function SpawnCollectible() {
     //generate the new index
     let index = Phaser.Math.Between(-1, 1);
-    console.log(index);
-    console.log(previousItemLane);
 
     //if new index is suitable
     if (index + previousItemLane >= amountOfLanes ||

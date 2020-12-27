@@ -31,6 +31,7 @@ class GameScene extends Phaser.Scene {
         this.load.image('1_collectible', 'Assets/coffee.png');
         this.load.atlas('1_energy', 'Assets/tmp.png', 'Assets/tmp.json');
 
+        this.load.atlas('transition', 'Assets/transition.png', 'Assets/transition.json');
         //forest
         this.load.image('2_background', 'Assets/snow-theme.png');
         this.load.image('2_obstacle1', 'Assets/snow-theme.png');
@@ -52,6 +53,8 @@ class GameScene extends Phaser.Scene {
         this.load.image('4_enemy', 'Assets/snow-theme.png');
         this.load.image('4_collectible', 'Assets/snow-theme.png');
 
+        //scoreboard
+        this.load.image('scoreboard','Assets/scoreboard.png');
     }
     create(){
         mainScene = this;
@@ -66,33 +69,36 @@ class GameScene extends Phaser.Scene {
             new lane(laneOffset * i);
         }
 
-
-
         CreatePlayer(0);
         SetTheme(1);
         CreateBackground();
         this.inputManager();
 
-        //this.physics.add.collider(p, o, this.func, null, this);
-
-        this.energySprite = this.add.sprite(200, 35, '1_energy');
+        //initiate scoreboard
+        this.scoreboard = this.add.sprite(0,0,'scoreboard');
+        this.scoreboard.setDepth(4);
+        this.scoreboard.setScale(1.5);
+        this.scoreboard.setOrigin(0,0);
+        this.scoreText = this.add.text(400,32,score.toString(),{ fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif' });
+        this.scoreText.setDepth(5);
+        this.energySprite = this.add.sprite(175, 32, '1_energy');
         this.energySprite.scale = 1.5;
         this.energySprite.setFrame("19.png");
-    }
-
-    func(player, obstacle) {
-        console.log("COLLIDE");
+        this.energySprite.setDepth(5);
     }
 
     update(time) {
         //calculate DeltaTime
-        deltaTime = (time-this.lastTime)/10000;
+        deltaTime = (time-this.lastTime)/1000;
         this.lastTime = time;
 
         MoveBackgroundOverTime();
         IncreaseDifficultyOverTime();
+        AddScoreOverTime();
         DecreaseEnergyOverTime();
         HandleSpawning();
+        UpdateScore();
+
         this.energySprite.setFrame(GetCurrentFrame());
 
         //for all the lanes
@@ -119,8 +125,6 @@ class GameScene extends Phaser.Scene {
                 DecreasePlayerLane();
             }
 
-            //#TODO: in menu energy bar and difficulty doesn't change
-            //#TODO: should be updated
             if(event.key === "p"){
                 this.scene.start("MainMenu");
             }

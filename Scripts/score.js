@@ -2,7 +2,7 @@ let score = 0;
 let scoreTimer = 0;
 let scoreIncreaseTime = 1;
 
-function AddScoreOverTime(scene)
+function AddScoreOverTime()
 {
     scoreTimer += deltaTime;
 
@@ -10,4 +10,8 @@ function AddScoreOverTime(scene)
         scoreTimer=0;
         score += 1;
     }
+}
+
+function UpdateScore(){
+    mainScene.scoreText.text = score.toString();
 }

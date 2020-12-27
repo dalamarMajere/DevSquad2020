@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="New asset (obstacle)">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time&#10;- Clean the code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/gameObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/gameObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/lane.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/lane.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/score.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/score.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/spawner.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/spawner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="TypeScript File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -39,20 +40,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Scripts/Scenes" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="ts.external.directory.path" value="B:\IT\WebStorm\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scripts\Scenes" />
       <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Assets" />
       <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Phaser" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Assets" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scripts" />
+      <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Assets" />
       <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Scripts\Scenes" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scenes" />
@@ -82,8 +85,9 @@
       <workItem from="1608990521043" duration="6088000" />
       <workItem from="1609003186457" duration="9063000" />
       <workItem from="1609022811135" duration="7119000" />
-      <workItem from="1609034019661" duration="1294000" />
-      <workItem from="1609073950617" duration="4800000" />
+      <workItem from="1609034019661" duration="1138000" />
+      <workItem from="1609083702021" duration="2165000" />
+      <workItem from="1609086115173" duration="51000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -183,14 +187,7 @@
       <option name="project" value="LOCAL" />
       <updated>1609026988914</updated>
     </task>
-    <task id="LOCAL-00015" summary="New asset (obstacle)">
-      <created>1609035294135</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1609035294135</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,8 +219,7 @@
     <MESSAGE value="- Energy bar (temperature)&#10;- New assets (coffee, temperature indicator and its json version)&#10;- Few fixes" />
     <MESSAGE value="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time" />
     <MESSAGE value="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time&#10;- Clean the code" />
-    <MESSAGE value="New asset (obstacle)" />
-    <option name="LAST_COMMIT_MESSAGE" value="New asset (obstacle)" />
+    <option name="LAST_COMMIT_MESSAGE" value="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time&#10;- Clean the code" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
