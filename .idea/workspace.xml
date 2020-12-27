@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time&#10;- Clean the code">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/gameObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/gameObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/lane.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/lane.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/score.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/score.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/spawner.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/spawner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="TypeScript File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -37,20 +40,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Scripts/Scenes" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="ts.external.directory.path" value="B:\IT\WebStorm\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scripts\Scenes" />
       <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Assets" />
       <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Phaser" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Assets" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scripts" />
+      <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Assets" />
       <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Scripts\Scenes" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scenes" />
@@ -81,6 +86,8 @@
       <workItem from="1609003186457" duration="9063000" />
       <workItem from="1609022811135" duration="7119000" />
       <workItem from="1609034019661" duration="1138000" />
+      <workItem from="1609083702021" duration="2165000" />
+      <workItem from="1609086115173" duration="51000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
