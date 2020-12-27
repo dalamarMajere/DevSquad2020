@@ -21,6 +21,9 @@ class GameScene extends Phaser.Scene {
 
     preload() {
 
+        this.load.image('ground', 'Assets/ground.png');
+
+
         //winter
         this.playerImg = this.load.image('player', 'Assets/player.jpg');
         this.load.image('1_background', 'Assets/snow-theme.png');
@@ -77,6 +80,10 @@ class GameScene extends Phaser.Scene {
         windowWidth= this.sys.game.config.width;
         laneOffset = windowWidth/amountOfLanes;
 
+        this.ground = this.physics.add.sprite(0, 810, 'ground');
+        this.ground.setOrigin(0, 0);
+        this.ground.setDepth(10);
+
         //create lane objects
         for(let i = 0; i < amountOfLanes;i++){
             new lane(laneOffset * i);
@@ -104,6 +111,8 @@ class GameScene extends Phaser.Scene {
         //for now: move all collectible
         moveQueueForward();
 
+
+        console.log(difficulty);
         energySprite.setFrame(GetCurrentFrame());
     }
 

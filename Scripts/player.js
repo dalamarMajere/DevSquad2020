@@ -13,7 +13,7 @@ function CreatePlayer(lane){
     player.setDepth(1);
     SetPlayerLane(lane);
 
-    player.setBounce(0);
+    player.setBounce(0.2);
     player.setCollideWorldBounds(true);
 }
 

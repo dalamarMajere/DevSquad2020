@@ -15,8 +15,8 @@ function getTail() {
     return queue[queue.length - 1];
 }
 
-function addQueue(x) {
-    let element = new gameObject('collectible', x);
+function addQueue(x, type) {
+    let element = new gameObject(type, x);
     queue.push(element);
 }
 
