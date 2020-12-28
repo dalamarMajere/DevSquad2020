@@ -18,8 +18,6 @@ function IncreaseDifficultyOverTime()
         difficultyTimer = 0;
         difficulty += difficultyIncrease;
 
-        velocity += (velocityIncrease * difficulty);
-        //#TODO: make better correlation
     }
 
     //add new obstacle every 5 * difficulty

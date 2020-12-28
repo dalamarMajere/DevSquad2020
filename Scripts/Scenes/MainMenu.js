@@ -22,8 +22,6 @@ class MainMenu extends Phaser.Scene {
         this.playButtonPosX = this.playButton.x - this.playButtonWidth/2;
         this.playButtonPosY = this.playButton.y - this.playButtonHeight/2;
 
-        console.log("Button Data: \n Position:["+this.playButtonPosX+","+this.playButtonPosY+"] \n Dimensions: ["+this.playButtonWidth+","+this.playButtonHeight+"]");
-
         //click check
         this.input.on('pointerdown',function(event){
             if(this.isHovering){

@@ -84,14 +84,12 @@ class GameScene extends Phaser.Scene {
         this.ground.setOrigin(0, 0);
         this.ground.setDepth(10);
 
-        //create lane objects
-        for(let i = 0; i < amountOfLanes;i++){
-            new lane(laneOffset * i);
-        }
-
         CreatePlayer(0);
         SetTheme(1);
         CreateBackground();
+
+        this.right = false;
+        this.left = false;
         this.inputManager();
         CreateScore();
         CreateEnergy();
@@ -102,6 +100,7 @@ class GameScene extends Phaser.Scene {
         deltaTime = (time-this.lastTime)/1000;
         this.lastTime = time;
 
+        MovePlayer();
         MoveBackgroundOverTime();
         IncreaseDifficultyOverTime();
         AddScoreOverTime();
@@ -111,8 +110,6 @@ class GameScene extends Phaser.Scene {
         //for now: move all collectible
         moveQueueForward();
 
-
-        console.log(difficulty);
         energySprite.setFrame(GetCurrentFrame());
     }
 
@@ -121,15 +118,15 @@ class GameScene extends Phaser.Scene {
     {
         //while key is pressed
         this.input.keyboard.on('keydown',function(event){
-            if(event.key === "p"){
+            if(event.key == "p"){
                 this.scene.start("MainMenu");
             }
             if (event.key == "d") { //#TODO: right and left keys
-                MoveRight();
+                this.right = true;
             }
 
-            if(event.key === "a"){
-                MoveLeft();
+            if(event.key == "a"){
+                this.left = true;
             }
 
         }, this);
@@ -137,12 +134,12 @@ class GameScene extends Phaser.Scene {
         //when key is unpressed
         this.input.keyboard.on('keyup', function(event) {
             //to make smoother transition check if "a" doesn't pressed
-            if (event.key == "d" && playerMoveRight) { //#TODO: right and left keys
-                StopPlayer();
+            if (event.key == "d") {
+                this.right = false;
             }
 
-            if(event.key === "a" && !playerMoveRight){
-                StopPlayer();
+            if(event.key=="a"){
+                this.left = false;
             }
         }, this);
     }
