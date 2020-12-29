@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="- New system of generating items (spawner)&#10;- New asset (fence, obstacle)&#10;- Little changes in difficulty and energy time&#10;- Clean the code">
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="Player Movement Revamp, deleted lane.js">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayButtonHover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TitleScreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/coffee.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/coffee_tran_ani.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/coffee_tran_ani.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/fence.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/player.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scoreboard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/snow-theme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tmp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tmp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/transition.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/transition.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/winter-theme.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/winter-tree.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Scenes/MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/MainMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/difficulty.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/difficulty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/lane.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +105,8 @@
       <workItem from="1609083702021" duration="2165000" />
       <workItem from="1609086115173" duration="51000" />
       <workItem from="1609105685203" duration="5818000" />
-      <workItem from="1609169026693" duration="5191000" />
+      <workItem from="1609169026693" duration="5418000" />
+      <workItem from="1609257925707" duration="1420000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -219,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609111161804</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Player Movement Revamp, deleted lane.js">
+      <created>1609175241448</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1609175241448</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +277,8 @@
     <MESSAGE value="Add new physics" />
     <MESSAGE value="- Animated coffee&#10;- Fix player controls&#10;- Some changes in collectible spawning" />
     <MESSAGE value="- Obstacle spawn&#10;- Add ground to collide with falling objects" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Obstacle spawn&#10;- Add ground to collide with falling objects" />
+    <MESSAGE value="Player Movement Revamp, deleted lane.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Player Movement Revamp, deleted lane.js" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

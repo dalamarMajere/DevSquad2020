@@ -5,9 +5,9 @@ class MainMenu extends Phaser.Scene {
     }
 
     preload() {
-       this.titleScreenImage = this.load.image('titleScreen', 'Assets/TitleScreen.png');
-        this.playButton = this.load.image('playButton', 'Assets/PlayButton.png');
-        this.playButtonHover = this.load.image('playButtonHover', 'Assets/PlayButtonHover.png');
+       this.titleScreenImage = this.load.image('titleScreen', 'Assets/MainMenu/TitleScreen.png');
+        this.playButton = this.load.image('playButton', 'Assets/MainMenu/PlayButton.png');
+        this.playButtonHover = this.load.image('playButtonHover', 'Assets/MainMenu/PlayButtonHover.png');
     }
 
     create(){

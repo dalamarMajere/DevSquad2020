@@ -21,34 +21,21 @@ class GameScene extends Phaser.Scene {
 
     preload() {
 
-        this.load.image('ground', 'Assets/ground.png');
-
+        this.load.atlas('transition', 'Assets/General/transition.png', 'Assets/General/transition.json');
+        this.load.image('ground', 'Assets/General/ground.png');
+        this.load.atlas('1_energy', 'Assets/General/tmp.png', 'Assets/General/tmp.json');
 
         //winter
-        this.playerImg = this.load.image('player', 'Assets/player.jpg');
-        this.load.image('1_background', 'Assets/snow-theme.png');
-        this.load.image('1_obstacle1', 'Assets/fence.png');
-        this.load.image('1_obstacle2', 'Assets/winter-tree.png');
-        //#TODO: animate coffee
-        this.load.image('1_enemy', 'Assets/coffee.png');
+        this.playerImg = this.load.image('player', 'Assets/player.png');
 
-        this.load.atlas('1_collectible', 'Assets/coffee_tran_ani.png', 'Assets/coffee_tran_ani.json');
-        /*this.anims.create({
-            key: '1_animation',
-            frames: this.anims.generateFrameNames('1_collectible', {
-                start: 0,
-                end: 2,
-                suffix: '.png'
-            }),
-            frameRate: 5,
-            repeat: -1
-        });*/
+        this.load.image('1_background', 'Assets/Winter/background.png');
+        this.load.image('1_obstacle1', 'Assets/Winter/obstacle1.png'); //rock
+        this.load.image('1_obstacle2', 'Assets/Winter/obstacle2.png'); //tree
+        this.load.image('1_obstacle2', 'Assets/Winter/obstacle3.png'); //fence
+        this.load.image('1_enemy', 'Assets/Winter/enemy.png');
+        this.load.atlas('1_collectible', 'Assets/Winter/collectible.png', 'Assets/Winter/collectible.json');
 
-        this.load.image('1_collectible', 'Assets/coffee.png');
-        this.load.atlas('1_energy', 'Assets/tmp.png', 'Assets/tmp.json');
-
-        this.load.atlas('transition', 'Assets/transition.png', 'Assets/transition.json');
-        //forest
+        /*
         this.load.image('2_background', 'Assets/snow-theme.png');
         this.load.image('2_obstacle1', 'Assets/snow-theme.png');
         this.load.image('2_obstacle2', 'Assets/snow-theme.png');
@@ -68,9 +55,10 @@ class GameScene extends Phaser.Scene {
         this.load.image('4_obstacle2', 'Assets/snow-theme.png');
         this.load.image('4_enemy', 'Assets/snow-theme.png');
         this.load.image('4_collectible', 'Assets/snow-theme.png');
+         */
 
         //scoreboard
-        this.load.image('scoreboard','Assets/scoreboard.png');
+        this.load.image('scoreboard','Assets/General/scoreboard.png');
     }
     create(){
         mainScene = this;
@@ -80,7 +68,7 @@ class GameScene extends Phaser.Scene {
         windowWidth= this.sys.game.config.width;
         laneOffset = windowWidth/amountOfLanes;
 
-        this.ground = this.physics.add.sprite(0, 810, 'ground');
+        this.ground = this.physics.add.sprite(0, windowHeight+200, 'ground');
         this.ground.setOrigin(0, 0);
         this.ground.setDepth(10);
 
