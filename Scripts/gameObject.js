@@ -1,4 +1,4 @@
-let pointsForCollecting = 1;
+let pointsForCollecting = 10;
 
 class gameObject{
     constructor(type,x) {
@@ -54,12 +54,11 @@ class gameObject{
     }
 
     MakeObstacle(x) {
-        let index = Phaser.Math.Between(1, 2);
-        if(index === 1){
-            this.objectSprite = mainScene.physics.add.sprite(x, 0, currentObstacle1Image);
-        }
-        else{
-            this.objectSprite = mainScene.physics.add.sprite(x, 0, currentObstacle2Image);
+        let index = Phaser.Math.Between(1, 3);
+        switch(index) {
+            case 1: this.objectSprite = mainScene.physics.add.sprite(x, 0, currentObstacle1Image); break;
+            case 2: this.objectSprite = mainScene.physics.add.sprite(x, 0, currentObstacle2Image); break;
+            case 3: this.objectSprite = mainScene.physics.add.sprite(x, 0, currentObstacle3Image); break;
         }
         mainScene.physics.add.collider(mainScene.ground, this.objectSprite,
             this.DestroyObstacle, null, this);
@@ -70,18 +69,17 @@ class gameObject{
     GetCollectible() {
         score += pointsForCollecting;
         IncreaseEnergyLevel();
-        collectibleAmount--;
-        this.Destroy();
+        this.DestroyCollectible();
     }
 
     CollisionWithPlayer() {
-        obstacleAmount--;
         DecreaseEnergyLevel();
-        this.Destroy();
+        this.DestroyObstacle();
     }
 
     DestroyObstacle() {
         obstacleAmount--;
+        deleteObstacle();
         this.Destroy();
     }
 
@@ -91,6 +89,7 @@ class gameObject{
 
     DestroyCollectible() {
         collectibleAmount--;
+        deleteCollectible();
         this.Destroy();
     }
 

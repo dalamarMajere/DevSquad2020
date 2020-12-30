@@ -1,13 +1,15 @@
 
-let previousX;
+let collectiblePreviousX;
+let obstaclePreviousX;
 //offset
-let changeX = 75;
+let collectibleDx = 80;
 let collectibleAmount = 0;
 
 let obstacleAmount = 0;
 let maxObstacleAmount = 6;
 
 //#TODO
+let widthOffset = 60 * 2; //3 * player width
 let collectibleHeight = 91;
 let collectibleWidth = 40;
 let obstacleHeight = 115;
@@ -15,7 +17,8 @@ let obstacleWidth = 70;
 
 //timer to spawn obstacles
 let spawnTimer = 0;
-let spawnTimerIncrease = 0.5;
+let spawnTimerIncrease = 1;
+
 
 function HandleSpawning() {
 
@@ -23,12 +26,12 @@ function HandleSpawning() {
 
     //if it's first call
     if (collectibleAmount === 0) {
-        previousX = Phaser.Math.Between(collectibleWidth, windowWidth - collectibleWidth);
+        collectiblePreviousX = Phaser.Math.Between(collectibleWidth, windowWidth - collectibleWidth);
         SpawnCollectible();
     }
     else {
         //the last object.y >= its.height / 4
-        if (getTail().objectSprite.y >= collectibleHeight / 2) {
+        if (getLastCollectible().objectSprite.y >= collectibleHeight / 2) {
             SpawnCollectible();
         }
     }
@@ -42,37 +45,51 @@ function HandleSpawning() {
 }
 
 function SpawnObstacle() {
-    let x = Phaser.Math.Between(obstacleWidth, windowWidth - obstacleWidth);
+    let x;
 
-    //#TODO: it doesn't work
     //to make sure than new obstacle won't collide with
     //other objects
-    if (Math.abs(x - getTail().objectSprite.x) <= obstacleWidth
-    && getTail().objectSprite.y <= obstacleHeight) {
-        SpawnObstacle();
-        return;
+    let counter = 0;
+    do {
+        x = Phaser.Math.Between(obstacleWidth, windowWidth - obstacleWidth);
+        counter++;
+        if (counter >= 20) return;
     }
+    while ((obstacleAmount > 0 && isTooClose(x, getLastObstacle().objectSprite.x) &&
+        getLastObstacle().objectSprite.y <= obstacleHeight) ||
+        (collectibleAmount > 0 && isTooClose(x, getLastCollectible().objectSprite.x)
+            && getLastCollectible().objectSprite.y <= collectibleHeight));
+
 
     addQueue(x, 'obstacle');
+    obstaclePreviousX = x;
     obstacleAmount++;
+}
+
+function isTooClose(x1, x2) {
+    return Math.abs(x1 - x2) < (widthOffset * 1.5);
 }
 
 function SpawnCollectible() {
     //generate the new index: right, the same, left
-    let index = Phaser.Math.Between(-1, 1);
+    let x;
 
-    let dx = index * changeX;
+    let counter = 0;
     //if new index is suitable
-    if (dx + previousX >= windowWidth - collectibleWidth * 2 ||
-        dx + previousX < collectibleWidth * 2) {
-        SpawnCollectible();
-        return;
+    do {
+        counter++;
+        x =  Phaser.Math.Between(-3, 2) * collectibleDx + collectiblePreviousX;
+        x = Math.max(Math.min(x, windowWidth - widthOffset), widthOffset);
+        if (counter >= 20) return;
     }
+    while (/*x >= windowWidth - widthOffset || x < widthOffset / 2 ||*/
+        (obstacleAmount > 0 && isTooClose(x, getLastObstacle().objectSprite.x)
+            && getLastObstacle().objectSprite.y < obstacleHeight / 2));
 
     //update x position
-    previousX += dx;
+    collectiblePreviousX = x;
 
     //make gameobject and add it to queue
     collectibleAmount++;
-    addQueue(previousX, 'collectible');
+    addQueue(collectiblePreviousX, 'collectible');
 }

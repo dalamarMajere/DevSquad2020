@@ -16,7 +16,7 @@ function CreateEnergy() {
 }
 
 function DecreaseEnergyOverTime() {
-    energyTimer += (deltaTime + difficulty / 10000);
+    energyTimer += (deltaTime + difficulty / 1000);
 
     if (energyTimer > energyIncreaseTime) {
         energyTimer = 0;

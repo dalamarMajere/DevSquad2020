@@ -3,10 +3,7 @@ let difficultyTimer = 0;
 let difficultyIncrease = 0.2;
 let difficultyIncreaseTime = 1;
 
-
-//#TODO: delete it and don't shame yourfelt
 let five = 1;
-let two = 1;
 
 function IncreaseDifficultyOverTime()
 {
@@ -18,17 +15,14 @@ function IncreaseDifficultyOverTime()
         difficultyTimer = 0;
         difficulty += difficultyIncrease;
 
+        velocity = Math.min(velocityIncrease + velocity, 800);
+        spawnTimerIncrease = Math.max(0.05, spawnTimerIncrease - 0.002 * difficulty);
+
     }
 
     //add new obstacle every 5 * difficulty
     if (difficulty / 5 > five) {
         maxObstacleAmount = Math.min(10, maxObstacleAmount + 1);
         five++;
-    }
-
-    //decrease obstacle spawn time every 2 * difficulty
-    if (difficulty / 2 > two) {
-        two++;
-        spawnTimerIncrease = Math.max(0.01, spawnTimerIncrease - 0.1   );
     }
 }

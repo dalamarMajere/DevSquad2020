@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="Player Movement Revamp, deleted lane.js">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21-Dec-20_20_31__Default_Changelist_.xml" beforeDir="false" />
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="for merge">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayButtonHover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TitleScreen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/coffee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/coffee_tran_ani.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/coffee_tran_ani.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/fence.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/player.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scoreboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/snow-theme.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tmp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tmp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/transition.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/transition.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/winter-theme.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/winter-tree.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Scenes/MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/MainMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/difficulty.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/difficulty.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/energy.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/energy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/gameObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/gameObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/queue.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/queue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/spawner.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/spawner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/theme.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +25,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -107,6 +97,7 @@
       <workItem from="1609105685203" duration="5818000" />
       <workItem from="1609169026693" duration="5418000" />
       <workItem from="1609257925707" duration="1420000" />
+      <workItem from="1609281203899" duration="7644000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
