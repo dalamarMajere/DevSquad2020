@@ -1,8 +1,4 @@
 let player;
-let direction = 0;
-let speed = 600;
-let velocityIncrease = 2;
-let playerMoveRight = false;
 
 function CreatePlayer(){
     //create player
@@ -12,12 +8,16 @@ function CreatePlayer(){
     //make sure the player is on top
     player.setDepth(1);
 
-    player.setBounce(0.2);
+    player.setBounce(0);
     //player won't go out from the borders
     player.setCollideWorldBounds(true);
 }
 
-function MovePlayer(){
+
+
+//let direction = 0;
+//let speed = 600;
+/*function MovePlayer(){
     player.x += direction * speed * deltaTime;
 
     //if the player is out of the bounds
@@ -37,4 +37,24 @@ function MovePlayer(){
     if(!mainScene.left && !mainScene.right){
         direction = 0;
     }
+}*/
+
+
+let velocityIncrease = 4;
+let playerMoveRight = false;
+let velocity = 300;
+
+function MoveRight(){
+    player.setVelocityX(velocity);
+    playerMoveRight = true;
+}
+
+function MoveLeft(){
+    player.setVelocityX(-velocity);
+    playerMoveRight = false;
+}
+
+function StopPlayer() {
+    player.setVelocity(0);
+    playerMoveRight = false;
 }

@@ -31,7 +31,7 @@ class GameScene extends Phaser.Scene {
         this.load.image('1_background', 'Assets/Winter/background.png');
         this.load.image('1_obstacle1', 'Assets/Winter/obstacle1.png'); //rock
         this.load.image('1_obstacle2', 'Assets/Winter/obstacle2.png'); //tree
-        this.load.image('1_obstacle2', 'Assets/Winter/obstacle3.png'); //fence
+        this.load.image('1_obstacle3', 'Assets/Winter/obstacle3.png'); //fence
         this.load.image('1_enemy', 'Assets/Winter/enemy.png');
         this.load.atlas('1_collectible', 'Assets/Winter/collectible.png', 'Assets/Winter/collectible.json');
 
@@ -76,8 +76,8 @@ class GameScene extends Phaser.Scene {
         SetTheme(1);
         CreateBackground();
 
-        this.right = false;
-        this.left = false;
+        //this.right = false;
+        //this.left = false;
         this.inputManager();
         CreateScore();
         CreateEnergy();
@@ -88,7 +88,7 @@ class GameScene extends Phaser.Scene {
         deltaTime = (time-this.lastTime)/1000;
         this.lastTime = time;
 
-        MovePlayer();
+        //MovePlayer();
         MoveBackgroundOverTime();
         IncreaseDifficultyOverTime();
         AddScoreOverTime();
@@ -106,15 +106,15 @@ class GameScene extends Phaser.Scene {
     {
         //while key is pressed
         this.input.keyboard.on('keydown',function(event){
-            if(event.key == "p"){
+            if(event.key === "p"){
                 this.scene.start("MainMenu");
             }
             if (event.key == "d") { //#TODO: right and left keys
-                this.right = true;
+                MoveRight();
             }
 
-            if(event.key == "a"){
-                this.left = true;
+            if(event.key === "a"){
+                MoveLeft();
             }
 
         }, this);
@@ -122,12 +122,12 @@ class GameScene extends Phaser.Scene {
         //when key is unpressed
         this.input.keyboard.on('keyup', function(event) {
             //to make smoother transition check if "a" doesn't pressed
-            if (event.key == "d") {
-                this.right = false;
+            if (event.key == "d" && playerMoveRight) { //#TODO: right and left keys
+                StopPlayer();
             }
 
-            if(event.key=="a"){
-                this.left = false;
+            if(event.key === "a" && !playerMoveRight){
+                StopPlayer();
             }
         }, this);
     }
