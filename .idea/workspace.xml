@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="for merge">
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="- Better objects spawning&#10;- Increased distance between collectibles&#10;- Changed energy, speed and score systems">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/difficulty.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/difficulty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/energy.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/energy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/gameObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/gameObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/queue.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/queue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/spawner.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/spawner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/theme.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +89,8 @@
       <workItem from="1609105685203" duration="5818000" />
       <workItem from="1609169026693" duration="5418000" />
       <workItem from="1609257925707" duration="1420000" />
-      <workItem from="1609281203899" duration="7644000" />
+      <workItem from="1609281203899" duration="7902000" />
+      <workItem from="1609289371442" duration="594000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -232,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609175241448</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="- Better objects spawning&#10;- Increased distance between collectibles&#10;- Changed energy, speed and score systems">
+      <created>1609289163409</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1609289163409</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +269,8 @@
     <MESSAGE value="- Animated coffee&#10;- Fix player controls&#10;- Some changes in collectible spawning" />
     <MESSAGE value="- Obstacle spawn&#10;- Add ground to collide with falling objects" />
     <MESSAGE value="Player Movement Revamp, deleted lane.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Player Movement Revamp, deleted lane.js" />
+    <MESSAGE value="- Better objects spawning&#10;- Increased distance between collectibles&#10;- Changed energy, speed and score systems" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Better objects spawning&#10;- Increased distance between collectibles&#10;- Changed energy, speed and score systems" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
