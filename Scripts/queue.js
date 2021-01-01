@@ -26,8 +26,10 @@ function addQueue(x, type) {
     let element = new gameObject(type, x);
     if (type == 'collectible')
         queueCollectible.push(element);
-    else
+    else {
         queueObstacle.push(element);
+        console.log(queueObstacle[queueObstacle.length - 1].objectType);
+    }
 }
 
 //move all objects down

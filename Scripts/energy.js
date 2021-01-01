@@ -4,7 +4,6 @@ let minFrame = 0;
 let frameSuffix = ".png";
 
 let energyTimer = 0;
-let energyIncreaseTime = 1;
 
 let energySprite;
 
@@ -47,6 +46,5 @@ function GetCurrentFrame() {
 }
 
 function gameOver() {
-    //#TODO: game over
-    console.log("Game Over!");
+    GameOver();
 }

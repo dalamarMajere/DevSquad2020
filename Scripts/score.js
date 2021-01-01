@@ -1,6 +1,5 @@
 let score = 0;
 let scoreTimer = 0;
-let scoreIncreaseTime = 1;
 
 let scoreboard;
 let scoreText;

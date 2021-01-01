@@ -70,7 +70,7 @@ class GameScene extends Phaser.Scene {
         this.ground.setOrigin(0, 0);
         this.ground.setDepth(10);
 
-        CreatePlayer(0);
+        CreatePlayer();
         CreateBackground();
 
         //this.right = false;
@@ -104,7 +104,7 @@ class GameScene extends Phaser.Scene {
         //while key is pressed
         this.input.keyboard.on('keydown',function(event){
             if(event.key === "p"){
-                this.scene.start("MainMenu");
+                GameOver();
             }
             if (event.key == "d") { //#TODO: right and left keys
                 MoveRight();
@@ -112,6 +112,10 @@ class GameScene extends Phaser.Scene {
 
             if(event.key === "a"){
                 MoveLeft();
+            }
+
+            if (event.key == "q") {
+                DestroyEnemy();
             }
 
         }, this);
