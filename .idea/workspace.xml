@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="Automatic theme changing">
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="New Assets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lava/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lava/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lava/obstacle3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lava/obstacle3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/energy.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/energy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +54,11 @@
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Scripts" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scripts" />
       <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Assets" />
       <recent name="C:\Users\vitas\WebstormProjects\DevSquad2020\Scripts\Scenes" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
+      <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scenes" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -95,6 +94,7 @@
       <workItem from="1609281203899" duration="7644000" />
       <workItem from="1609425821728" duration="1882000" />
       <workItem from="1609436928119" duration="379000" />
+      <workItem from="1609517653261" duration="383000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -243,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609437297232</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="New Assets">
+      <created>1609517703603</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1609517703603</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +289,8 @@
     <MESSAGE value="Player Movement Revamp, deleted lane.js" />
     <MESSAGE value="New assets" />
     <MESSAGE value="QuickFix" />
-    <option name="LAST_COMMIT_MESSAGE" value="QuickFix" />
+    <MESSAGE value="New Assets" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Assets" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
