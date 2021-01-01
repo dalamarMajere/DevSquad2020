@@ -25,7 +25,7 @@ class MainMenu extends Phaser.Scene {
         //click check
         this.input.on('pointerdown',function(event){
             if(this.isHovering){
-                this.scene.start('GameScene');
+                NewGame();
             }
         }, this);
     }

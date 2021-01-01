@@ -75,7 +75,6 @@ class GameScene extends Phaser.Scene {
         this.ground.setDepth(10);
 
         CreatePlayer(0);
-        SetTheme(1);
         CreateBackground();
 
         //this.right = false;
