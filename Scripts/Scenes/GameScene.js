@@ -40,16 +40,12 @@ class GameScene extends Phaser.Scene {
         this.load.image('2_obstacle3', 'Assets/Grass/obstacle3.png'); //fence
         this.load.image('2_enemy', 'Assets/Grass/enemy.png');
 
-        //this.load.image('2_collectible', 'Assets/Grass/collectible.png');
-
-        /*
         //lava
-        this.load.image('3_background', 'Assets/snow-theme.png');
-        this.load.image('3_obstacle1', 'Assets/snow-theme.png');
-        this.load.image('3_obstacle2', 'Assets/snow-theme.png');
-        this.load.image('3_enemy', 'Assets/snow-theme.png');
-        this.load.image('3_collectible', 'Assets/snow-theme.png');
-        */
+        this.load.image('3_background', 'Assets/Lava/background.png');
+        this.load.image('3_obstacle1', 'Assets/Lava/obstacle1.png'); //rock
+        this.load.image('3_obstacle2', 'Assets/Lava/obstacle2.png'); //tree
+        this.load.image('3_obstacle3', 'Assets/Lava/obstacle3.png'); //fence
+        this.load.image('3_enemy', 'Assets/Lava/enemy.png');
 
         //space
         this.load.image('4_background', 'Assets/Space/background.png');
