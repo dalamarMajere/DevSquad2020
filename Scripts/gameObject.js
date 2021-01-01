@@ -1,5 +1,3 @@
-let pointsForCollecting = 10;
-
 class gameObject{
     constructor(type,x) {
         this.objectType = type;
@@ -11,7 +9,7 @@ class gameObject{
             case "enemy":
                 this.objectSprite = mainScene.physics.add.sprite(x, 0, currentEnemyImage);
                 mainScene.physics.add.collider(mainScene.ground, this.objectSprite,
-                    this.DestroyEnemy, null, this);
+                    EnemyAttack, null, this);
                 mainScene.physics.add.collider(player, this.objectSprite,
                     gameOver, null, this);
                 break;
@@ -83,9 +81,6 @@ class gameObject{
         this.Destroy();
     }
 
-    DestroyEnemy() {
-        this.Destroy();
-    }
 
     DestroyCollectible() {
         collectibleAmount--;
@@ -97,4 +92,21 @@ class gameObject{
         this.objectSprite.destroy();
         //#TODO: destroy the object itself, not only the sprite
     }
+}
+
+function DestroyEnemy() {
+    if (isEnemy) {
+        isEnemy = false;
+        for (let i = 0; i < queueObstacle.length; i++) {
+            if (queueObstacle[i].objectType == 'enemy') {
+                queueObstacle[i].Destroy();
+                queueObstacle.splice(i, 1);
+            }
+        }
+        score += pointsForEnemy;
+    }
+}
+
+function EnemyAttack() {
+    score -= pointsForEnemy;
 }

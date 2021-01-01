@@ -70,7 +70,7 @@ class GameScene extends Phaser.Scene {
         this.ground.setOrigin(0, 0);
         this.ground.setDepth(10);
 
-        CreatePlayer(0);
+        CreatePlayer();
         CreateBackground();
 
         //this.right = false;
@@ -112,6 +112,10 @@ class GameScene extends Phaser.Scene {
 
             if(event.key === "a"){
                 MoveLeft();
+            }
+
+            if (event.key == "q") {
+                DestroyEnemy();
             }
 
         }, this);

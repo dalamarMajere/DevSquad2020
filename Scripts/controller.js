@@ -1,42 +1,58 @@
 function GameOver() {
+    //your score:
+    mainScene.scene.start('MainMenu');
+}
+
+function RefreshEnergy() {
     currentEnergyLevel = basicEnergyFrame;
-    energyTimer = basicTimer;
+}
 
-    difficulty = basicDifficulty;
-    difficultyTimer = basicTimer;
-
+function RefreshSpawner() {
     collectibleAmount = basicCollectibleAmount;
     obstacleAmount = basicObstacleAmount;
-    maxObstacleAmount = basicMaxObstacleAmount;
-    spawnTimer = basicTimer;
+    currentMaxObstacleAmount = basicMaxObstacleAmount;
+}
 
-    console.log("start");
-    mainScene.scene.start('MainMenu');
+function RefreshTimers() {
+    energyTimer = basicTimer;
+    difficultyTimer = basicTimer;
+    spawnTimer = basicTimer;
+    scoreTimer = basicTimer;
+    spawnEnemyTimer = basicTimer;
+    spawnTimerIncrease = basicSpawnTimeIncrease;
+    spawnEnemyTimerIncrease = basicSpawnEnemyTimeIncrease;
+}
+
+function NextLevel() {
+    RefreshEnergy();
+    RefreshSpawner();
+    RefreshTimers();
+
+    difficulty -= levelIncrease / 2;
+
+    GetNextTheme();
+    StartTransition(350, 400);
+    game.scene.start('GameScene');
 }
 
 let theme = [0, 0, 0, 0];
 let currentTheme = -1;
 
 function NewGame() {
-    if (currentTheme == -1) {
-        currentTheme = 1;
-    }
-    else {
-        currentTheme = GetNextTheme();
-    }
-    SetTheme(currentTheme);
-    theme[currentTheme - 1]++;
+    RefreshEnergy();
+    RefreshSpawner();
+    RefreshTimers();
+    difficulty = basicDifficulty;
+    score = basicScore;
+    GetNextTheme();
     game.scene.start('GameScene');
 }
 
-function GetNextTheme() {
-    console.log("Theme: " + currentTheme);
+function SelectNextTheme() {
     let min = theme[0];
     let minIndx = [];
     minIndx.push(1);
-    console.log("THEMES: ");
     for (let i = 0; i < 4; i++) {
-        console.log(theme[i]);
         if (min > theme[i]) {
             minIndx = [];
             minIndx.push(i);
@@ -45,6 +61,11 @@ function GetNextTheme() {
             minIndx.push(i);
         }
     }
-    console.log("endTHEME");
     return minIndx[Phaser.Math.Between(0, minIndx.length - 1)] + 1;
+}
+
+function GetNextTheme() {
+    currentTheme = SelectNextTheme();
+    theme[currentTheme - 1]++;
+    SetTheme(currentTheme);
 }
