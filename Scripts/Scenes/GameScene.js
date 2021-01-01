@@ -20,42 +20,44 @@ class GameScene extends Phaser.Scene {
     }
 
     preload() {
-
+        this.load.atlas('collectible', 'Assets/collectible.png', 'Assets/collectible.json');
         this.load.atlas('transition', 'Assets/General/transition.png', 'Assets/General/transition.json');
         this.load.image('ground', 'Assets/General/ground.png');
-        this.load.atlas('1_energy', 'Assets/General/tmp.png', 'Assets/General/tmp.json');
-
-        //winter
+        this.load.atlas('energy', 'Assets/General/tmp.png', 'Assets/General/tmp.json');
         this.playerImg = this.load.image('player', 'Assets/player.png');
 
+        //winter
         this.load.image('1_background', 'Assets/Winter/background.png');
         this.load.image('1_obstacle1', 'Assets/Winter/obstacle1.png'); //rock
         this.load.image('1_obstacle2', 'Assets/Winter/obstacle2.png'); //tree
         this.load.image('1_obstacle3', 'Assets/Winter/obstacle3.png'); //fence
         this.load.image('1_enemy', 'Assets/Winter/enemy.png');
-        this.load.atlas('1_collectible', 'Assets/Winter/collectible.png', 'Assets/Winter/collectible.json');
+
+        //grass
+        this.load.image('2_background', 'Assets/Grass/background.png');
+        this.load.image('2_obstacle1', 'Assets/Grass/obstacle1.png'); //rock
+        this.load.image('2_obstacle2', 'Assets/Grass/obstacle2.png'); //tree
+        this.load.image('2_obstacle3', 'Assets/Grass/obstacle3.png'); //fence
+        this.load.image('2_enemy', 'Assets/Grass/enemy.png');
+
+        //this.load.image('2_collectible', 'Assets/Grass/collectible.png');
 
         /*
-        this.load.image('2_background', 'Assets/snow-theme.png');
-        this.load.image('2_obstacle1', 'Assets/snow-theme.png');
-        this.load.image('2_obstacle2', 'Assets/snow-theme.png');
-        this.load.image('2_enemy', 'Assets/snow-theme.png');
-        this.load.image('2_collectible', 'Assets/snow-theme.png');
-
         //lava
         this.load.image('3_background', 'Assets/snow-theme.png');
         this.load.image('3_obstacle1', 'Assets/snow-theme.png');
         this.load.image('3_obstacle2', 'Assets/snow-theme.png');
         this.load.image('3_enemy', 'Assets/snow-theme.png');
         this.load.image('3_collectible', 'Assets/snow-theme.png');
+        */
 
         //space
-        this.load.image('4_background', 'Assets/snow-theme.png');
-        this.load.image('4_obstacle1', 'Assets/snow-theme.png');
-        this.load.image('4_obstacle2', 'Assets/snow-theme.png');
-        this.load.image('4_enemy', 'Assets/snow-theme.png');
-        this.load.image('4_collectible', 'Assets/snow-theme.png');
-         */
+        this.load.image('4_background', 'Assets/Space/background.png');
+        this.load.image('4_obstacle1', 'Assets/Space/obstacle1.png'); //rock
+        this.load.image('4_obstacle2', 'Assets/Space/obstacle2.png'); //tree
+        this.load.image('4_obstacle3', 'Assets/Space/obstacle3.png'); //fence
+        this.load.image('4_enemy', 'Assets/Space/enemy.png');
+
 
         //scoreboard
         this.load.image('scoreboard','Assets/General/scoreboard.png');

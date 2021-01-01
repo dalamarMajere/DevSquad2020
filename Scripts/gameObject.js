@@ -41,8 +41,8 @@ class gameObject{
                                     this.DestroyCollectible, null, this);
 
         mainScene.anims.create({
-            key: '1_animation',
-            frames: mainScene.anims.generateFrameNames('1_collectible', {
+            key: 'animation',
+            frames: mainScene.anims.generateFrameNames('collectible', {
                 start: 0,
                 end: 2,
                 suffix: '.png'
