@@ -47,6 +47,5 @@ function GetCurrentFrame() {
 }
 
 function gameOver() {
-    //#TODO: game over
-    console.log("Game Over!");
+    GameOver();
 }

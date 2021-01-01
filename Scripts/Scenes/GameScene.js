@@ -108,7 +108,7 @@ class GameScene extends Phaser.Scene {
         //while key is pressed
         this.input.keyboard.on('keydown',function(event){
             if(event.key === "p"){
-                this.scene.start("MainMenu");
+                GameOver();
             }
             if (event.key == "d") { //#TODO: right and left keys
                 MoveRight();

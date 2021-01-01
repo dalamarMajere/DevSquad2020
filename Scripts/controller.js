@@ -1,6 +1,17 @@
 function GameOver() {
-    //zero all
-    game.scene.start('MainMenu');
+    currentEnergyLevel = basicEnergyFrame;
+    energyTimer = basicTimer;
+
+    difficulty = basicDifficulty;
+    difficultyTimer = basicTimer;
+
+    collectibleAmount = basicCollectibleAmount;
+    obstacleAmount = basicObstacleAmount;
+    maxObstacleAmount = basicMaxObstacleAmount;
+    spawnTimer = basicTimer;
+
+    console.log("start");
+    mainScene.scene.start('MainMenu');
 }
 
 let theme = [0, 0, 0, 0];
