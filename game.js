@@ -3,7 +3,7 @@ var config = {
     type:Phaser.AUTO,
     width:600,
     height:800,
-    scene: [MainMenu, GameScene],
+    scene: [MainMenu, HowToPlay, GameScene],
     physics : {
         default:'arcade'
     }
