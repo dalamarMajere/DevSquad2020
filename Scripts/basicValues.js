@@ -15,6 +15,8 @@ let basicScore = 0;
 
 let levelIncrease = 5;
 
+let basicPortalIncrease = 1;
+
 //score
 let scoreIncreaseTime = 1;
 let pointsForCollecting = 10;
@@ -34,3 +36,6 @@ let spawnTimerIncrease = 4;
 let spawnEnemyTimerIncrease = 10;
 
 let maxObstacleAmount = 12;
+
+let portalIncrease = 1;
+let portalSpawned = false;

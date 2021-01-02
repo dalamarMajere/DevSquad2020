@@ -15,6 +15,8 @@ function CreateEnergy() {
 }
 
 function DecreaseEnergyOverTime() {
+    if (portalSpawned) return;
+
     energyTimer += (deltaTime + difficulty / 1000);
 
     if (energyTimer > energyIncreaseTime) {

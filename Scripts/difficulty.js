@@ -5,6 +5,8 @@ let five = 1;
 
 function IncreaseDifficultyOverTime()
 {
+    if (portalSpawned) return;
+
     //increase timers
     difficultyTimer += deltaTime;
 
@@ -19,8 +21,17 @@ function IncreaseDifficultyOverTime()
     }
 
     //add new obstacle every 5 * difficulty
-    if (difficulty / 5 > five) {
+    if (difficulty / 4 > five) {
         currentMaxObstacleAmount = Math.min(maxObstacleAmount, currentMaxObstacleAmount + 1);
         five++;
+    }
+
+
+    //#TODO: change 8 to constant
+   // console.log(difficulty / 2 + "Di/2");
+    if ((difficulty / levelIncrease) >= portalIncrease) {
+        portalIncrease++;
+        console.log("go");
+        CreatePortal();
     }
 }

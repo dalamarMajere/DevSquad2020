@@ -23,6 +23,8 @@ let spawnEnemyTimer = 0;
 
 function HandleSpawning() {
 
+    if (portalSpawned) return;
+
     spawnTimer += deltaTime;
     if (!isEnemy) spawnEnemyTimer += deltaTime;
 

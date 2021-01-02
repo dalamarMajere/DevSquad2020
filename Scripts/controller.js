@@ -23,15 +23,37 @@ function RefreshTimers() {
     spawnEnemyTimerIncrease = basicSpawnEnemyTimeIncrease;
 }
 
+let portal;
+
+//#TODO: changge portal coordinates and other graphics stuff
+function CreatePortal() {
+    //#TODO: wait some time so all objects will disappear
+    portalSpawned = true;
+
+    portal = mainScene.physics.add.sprite(350, 0, "portal");
+    portal.setDepth(10);
+    mainScene.physics.add.collider(player, portal, NextLevel, null, null);
+    mainScene.physics.add.collider(mainScene.ground, portal, Continue, null, null);
+    //#TODO: fix 200
+    portal.setVelocityY(200);
+}
+
+function Continue() {
+    portalSpawned = false;
+}
+
 function NextLevel() {
+    portalSpawned = false;
     RefreshEnergy();
     RefreshSpawner();
     RefreshTimers();
 
     difficulty -= levelIncrease / 2;
+    score += pointsForPortal;
 
     GetNextTheme();
     StartTransition(350, 400);
+    //#TODO: wait some time so transition will play
     game.scene.start('GameScene');
 }
 
@@ -42,8 +64,10 @@ function NewGame() {
     RefreshEnergy();
     RefreshSpawner();
     RefreshTimers();
+    portalIncrease = basicPortalIncrease;
     difficulty = basicDifficulty;
     score = basicScore;
+    portalSpawned = false;
     GetNextTheme();
     game.scene.start('GameScene');
 }

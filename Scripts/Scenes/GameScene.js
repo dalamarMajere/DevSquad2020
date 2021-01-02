@@ -25,6 +25,7 @@ class GameScene extends Phaser.Scene {
         this.load.image('ground', 'Assets/General/ground.png');
         this.load.atlas('energy', 'Assets/General/tmp.png', 'Assets/General/tmp.json');
         this.playerImg = this.load.image('player', 'Assets/player.png');
+        this.load.image('portal', 'Assets/portal.png');
 
         //winter
         this.load.image('1_background', 'Assets/Winter/background.png');
@@ -84,6 +85,8 @@ class GameScene extends Phaser.Scene {
         //calculate DeltaTime
         deltaTime = (time-this.lastTime)/1000;
         this.lastTime = time;
+
+        console.log(difficulty);
 
         //MovePlayer();
         MoveBackgroundOverTime();
