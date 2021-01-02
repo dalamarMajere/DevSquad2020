@@ -28,6 +28,7 @@ class HowToPlay extends Phaser.Scene {
         this.input.on('pointerdown',function(event){
             if(this.isHoveringBack){
                 this.scene.start("MainMenu");
+                this.scene.stop("HowToPlay");
             }
         }, this);
     }

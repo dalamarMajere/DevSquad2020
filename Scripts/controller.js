@@ -1,6 +1,11 @@
+let startGameOver = false;
 function GameOver() {
-    //your score:
-    mainScene.scene.start('MainMenu');
+    if(!startGameOver){
+        transition = mainScene.add.sprite(player.x+player.width/2,player.y+player.height/2,'transition');
+        transition.setDepth(20);
+        transition.play('transitionAnimation');
+    }
+    startGameOver = true;
 }
 
 function RefreshEnergy() {
@@ -24,17 +29,15 @@ function RefreshTimers() {
 }
 
 let portal;
-
-//#TODO: changge portal coordinates and other graphics stuff
 function CreatePortal() {
-    //#TODO: wait some time so all objects will disappear
     portalSpawned = true;
 
-    portal = mainScene.physics.add.sprite(350, 0, "portal");
-    portal.setDepth(10);
+    portal = mainScene.physics.add.sprite(0, 0, "portal");
+    portal.setOrigin(0);
+    portal.x = Phaser.Math.Between(portal.width,windowWidth-portal.width);
+    portal.setDepth(3);
     mainScene.physics.add.collider(player, portal, NextLevel, null, null);
     mainScene.physics.add.collider(mainScene.ground, portal, Continue, null, null);
-    //#TODO: fix 200
     portal.setVelocityY(200);
 }
 
@@ -42,6 +45,8 @@ function Continue() {
     portalSpawned = false;
 }
 
+let startNextLevel = false;
+let transition;
 function NextLevel() {
     portalSpawned = false;
     RefreshEnergy();
@@ -52,9 +57,11 @@ function NextLevel() {
     score += pointsForPortal;
 
     GetNextTheme();
-    StartTransition(350, 400);
-    //#TODO: wait some time so transition will play
-    game.scene.start('GameScene');
+    transition = mainScene.add.sprite(portal.x+portal.width/2,portal.y+portal.height/2,'transition');
+    transition.setDepth(20);
+    transition.play('transitionAnimation');
+    startNextLevel = true;
+
 }
 
 let theme = [0, 0, 0, 0];

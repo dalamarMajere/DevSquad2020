@@ -3,13 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="for merge">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainMenu/MainMenuText.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainMenu/MainMenuText.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Scenes/HowToPlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/HowToPlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Scenes/MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/MainMenu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/basicValues.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/basicValues.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/difficulty.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/difficulty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/energy.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/energy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/queue.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/queue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/spawner.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/spawner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/score.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/score.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/transition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +68,11 @@
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020" />
       <recent name="C:\Users\kamil\WebstormProjects\DevSquad2020\Scenes" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" nameIsGenerated="true" port="9229">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

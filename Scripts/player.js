@@ -13,33 +13,6 @@ function CreatePlayer(){
     player.setCollideWorldBounds(true);
 }
 
-
-
-//let direction = 0;
-//let speed = 600;
-/*function MovePlayer(){
-    player.x += direction * speed * deltaTime;
-
-    //if the player is out of the bounds
-    if(player.x < 0){
-        player.x = 0
-    }else if(player.x > windowWidth - player.width){
-        player.x = windowWidth - player.width;
-    }
-
-    if(mainScene.right && direction !=1){
-        direction = 1;
-    }
-    if(mainScene.left && direction != -1){
-        direction = -1;
-    }
-
-    if(!mainScene.left && !mainScene.right){
-        direction = 0;
-    }
-}*/
-
-
 let velocityIncrease = 4;
 let playerMoveRight = false;
 let velocity = 300;
