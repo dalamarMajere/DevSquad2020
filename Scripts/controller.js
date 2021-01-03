@@ -29,6 +29,8 @@ function RefreshTimers() {
 }
 
 let portal;
+let cont = false;
+
 function CreatePortal() {
     portalSpawned = true;
 
@@ -43,6 +45,7 @@ function CreatePortal() {
 
 function Continue() {
     portalSpawned = false;
+    cont = true;
 }
 
 let startNextLevel = false;
