@@ -20,6 +20,10 @@ class GameScene extends Phaser.Scene {
     }
 
     preload() {
+        this.load.audio('hit','Assets/Sounds/hit.mp3');
+        this.load.audio('drink','Assets/Sounds/drink.mp3');
+        this.load.audio('gameover','Assets/Sounds/gameover.mp3');
+
         this.load.atlas('collectible', 'Assets/collectible.png', 'Assets/collectible.json');
         this.load.atlas('transition', 'Assets/General/transition.png', 'Assets/General/transition.json');
         this.load.image('ground', 'Assets/General/ground.png');
@@ -74,6 +78,7 @@ class GameScene extends Phaser.Scene {
 
     }
     create(){
+
         this.playEntryAnimation = true;
         mainScene = this;
         this.lastTime = 0;
@@ -92,6 +97,10 @@ class GameScene extends Phaser.Scene {
         CreateScore();
         CreateEnergy();
 
+        //sounds
+        this.hit = this.sound.add('hit');
+        this.drink = this.sound.add('drink');
+        this.gameover = this.sound.add('gameover');
     }
 
     update(time) {
@@ -104,8 +113,6 @@ class GameScene extends Phaser.Scene {
         //calculate DeltaTime
         deltaTime = (time-this.lastTime)/1000;
         this.lastTime = time;
-
-        console.log(difficulty);
 
         //MovePlayer();
         MoveBackgroundOverTime();
@@ -127,7 +134,6 @@ class GameScene extends Phaser.Scene {
         if(startGameOver && !transition.visible){
             startGameOver = false;
             this.scene.start("MainMenu")
-            this.scene.stop();
         }
     }
 

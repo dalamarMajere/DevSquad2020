@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="Changed obstacles limits">
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="for merge">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/difficulty.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/difficulty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/energy.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/energy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/spawner.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/spawner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Scenes/HowToPlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/HowToPlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Scenes/MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/MainMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/basicValues.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/basicValues.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/gameObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/gameObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/player.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,6 +309,17 @@
     <MESSAGE value="QuickFix" />
     <MESSAGE value="Changed obstacles limits" />
     <option name="LAST_COMMIT_MESSAGE" value="Changed obstacles limits" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Scripts/controller.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

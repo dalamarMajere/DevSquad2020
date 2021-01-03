@@ -66,11 +66,13 @@ class gameObject{
 
     GetCollectible() {
         score += pointsForCollecting;
+        mainScene.drink.play();
         IncreaseEnergyLevel();
         this.DestroyCollectible();
     }
 
     CollisionWithPlayer() {
+        mainScene.hit.play();
         DecreaseEnergyLevel();
         this.DestroyObstacle();
     }

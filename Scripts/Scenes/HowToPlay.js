@@ -5,6 +5,7 @@ class HowToPlay extends Phaser.Scene {
     }
 
     preload() {
+        this.load.audio('buttonClick','Assets/Sounds/buttonClick.mp3');
         this.load.image('HowToPlayScreen', 'Assets/MainMenu/HowToPlayScreen.png');
 
         this.backButton = this.load.image('backButton', 'Assets/MainMenu/BackButton.png');
@@ -24,9 +25,12 @@ class HowToPlay extends Phaser.Scene {
         this.backButtonPosX = this.backButton.x - this.backButtonWidth/2;
         this.backButtonPosY = this.backButton.y - this.backButtonHeight/2;
 
+        this.click = this.sound.add('buttonClick');
+
         //click check
         this.input.on('pointerdown',function(event){
             if(this.isHoveringBack){
+                this.click.play();
                 this.scene.start("MainMenu");
                 this.scene.stop("HowToPlay");
             }

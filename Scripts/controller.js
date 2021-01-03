@@ -1,6 +1,7 @@
 let startGameOver = false;
 function GameOver() {
     if(!startGameOver){
+        mainScene.gameover.play();
         transition = mainScene.add.sprite(player.x+player.width/2,player.y+player.height/2,'transition');
         transition.setDepth(20);
         transition.play('transitionAnimation');
@@ -53,7 +54,7 @@ function NextLevel() {
     RefreshSpawner();
     RefreshTimers();
 
-    difficulty -= levelIncrease / 2;
+    difficulty /= 1.5;
     score += pointsForPortal;
 
     GetNextTheme();
