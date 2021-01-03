@@ -23,6 +23,8 @@ class GameScene extends Phaser.Scene {
         this.load.audio('hit','Assets/Sounds/hit.mp3');
         this.load.audio('drink','Assets/Sounds/drink.mp3');
         this.load.audio('gameover','Assets/Sounds/gameover.mp3');
+        //attack
+        this.load.atlas('attack', 'Assets/attack.png', 'Assets/attack.json');
 
         this.load.atlas('collectible', 'Assets/collectible.png', 'Assets/collectible.json');
         this.load.atlas('transition', 'Assets/General/transition.png', 'Assets/General/transition.json');
@@ -65,17 +67,16 @@ class GameScene extends Phaser.Scene {
 
         //transition
         this.anims.create({
-            key: 'transitionAnimation',
-            frames: this.anims.generateFrameNames('transition', {
+            key: 'attackAnimation',
+            frames: this.anims.generateFrameNames('attack', {
                 start: 0,
-                end: 9,
+                end: 14,
                 suffix: '.png'
             }),
             frameRate: 24,
             repeat: 0,
             hideOnComplete: true
         });
-
     }
     create(){
         this.playEntryAnimation = true;
@@ -92,6 +93,11 @@ class GameScene extends Phaser.Scene {
         this.ground.setDepth(10);
 
         CreatePlayer();
+        //attackanimation
+        this.attack = this.add.sprite(0,0,'attack');
+        this.attack.setOrigin(0,0);
+        this.attack.setDepth(player.depth);
+
         CreateBackground();
         this.inputManager();
         CreateScore();
@@ -104,6 +110,10 @@ class GameScene extends Phaser.Scene {
     }
 
     update(time) {
+        //place attack sprite in front of the player;
+        this.attack.x = player.x;
+        this.attack.y = player.y - this.attack.height;
+
         if(this.playEntryAnimation){
             this.playEntryAnimation=false;
             this.transition = this.add.sprite(windowWidth/2,windowHeight/2,'transition');
@@ -113,8 +123,6 @@ class GameScene extends Phaser.Scene {
         //calculate DeltaTime
         deltaTime = (time-this.lastTime)/1000;
         this.lastTime = time;
-
-        if (isEnemy) console.log(enemy.objectSprite.y);
 
         //MovePlayer();
         MoveBackgroundOverTime();
@@ -159,6 +167,7 @@ class GameScene extends Phaser.Scene {
 
             if (event.key == "k" || event.key == "K") {
                 HitEnemy();
+                this.attack.play('attackAnimation');
             }
 
         }, this);
