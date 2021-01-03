@@ -158,7 +158,7 @@ class GameScene extends Phaser.Scene {
             }
 
             if (event.key == "k" || event.key == "K") {
-                DestroyEnemy(true);
+                HitEnemy();
             }
 
         }, this);

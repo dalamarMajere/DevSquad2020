@@ -8,6 +8,7 @@ class gameObject{
                 break;
             case "enemy":
                 this.objectSprite = mainScene.physics.add.sprite(x, 0, currentEnemyImage);
+                this.objectSprite.setOrigin(0,0);
                 mainScene.physics.add.collider(mainScene.ground, this.objectSprite,
                     DestroyEnemy, null, this);
                 mainScene.physics.add.collider(player, this.objectSprite,
@@ -101,14 +102,21 @@ class gameObject{
     }
 }
 
-function DestroyEnemy(win) {
-    console.log('here');
+function HitEnemy() {
     if (isEnemy) {
-        console.log('and here');
-        isEnemy = false;
-        enemy.Destroy();
-        enemy = null;
-        if (win) score += pointsForEnemy;
-        else score -= pointsForEnemy;
+        if(enemy.objectSprite.x >= player.x - enemy.objectSprite.width  && enemy.objectSprite.x <= player.x + enemy.objectSprite.width) {
+            if(enemy.objectSprite.y > player.y - 2 * player.height) {
+                isEnemy = false;
+                enemy.Destroy();
+                enemy = null;
+                score += pointsForEnemy;
+            }
+        }
     }
+}
+
+function DestroyEnemy(){
+    isEnemy = false;
+    enemy.Destroy();
+    enemy = null;
 }
