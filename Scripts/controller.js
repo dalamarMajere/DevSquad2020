@@ -80,6 +80,7 @@ function NewGame() {
     portalIncrease = basicPortalIncrease;
     difficulty = basicDifficulty;
     score = basicScore;
+    energyDecreaseTime = basicEnergyDecreaseTime;
     portalSpawned = false;
     isEnemy = false;
     GetNextTheme();

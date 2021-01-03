@@ -93,9 +93,10 @@ function SelectX() {
         if (counter >= 20) return -1;
     }
     while ((obstacleAmount > 0 && isTooClose(x, getLastObstacle().objectSprite.x) &&
-        getLastObstacle().objectSprite.y <= obstacleHeight) ||
+        getLastObstacle().objectSprite.y <= obstacleHeight) ||              //with obstacle
     (collectibleAmount > 0 && isTooClose(x, getLastCollectible().objectSprite.x)
-        && getLastCollectible().objectSprite.y <= collectibleHeight / 2));
+        && getLastCollectible().objectSprite.y <= collectibleHeight / 2)  //with collectible
+       || (isEnemy && isTooClose(x, enemy.objectSprite.x) && enemy.objectSprite.y <= collectibleHeight / 2 ));                //with enemy
     spawnTimer = 0;
     return x;
 }

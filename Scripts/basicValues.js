@@ -24,7 +24,8 @@ let pointsForEnemy = 100;
 let pointsForPortal = 50;
 
 //energy
-let energyIncreaseTime = 3;
+let energyDecreaseTime = 1.8;
+let basicEnergyDecreaseTime = 1.8;
 
 //difficulty
 let difficultyIncrease = 0.1;

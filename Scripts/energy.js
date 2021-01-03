@@ -18,9 +18,9 @@ function DecreaseEnergyOverTime() {
     if (portalSpawned) return;
 
     //#TODO: energy bar
-    energyTimer += (deltaTime + difficulty / 1000);
+    energyTimer += (deltaTime + difficulty / 400);
 
-    if (energyTimer > energyIncreaseTime) {
+    if (energyTimer > energyDecreaseTime) {
         energyTimer = 0;
         DecreaseEnergyLevel();
     }
