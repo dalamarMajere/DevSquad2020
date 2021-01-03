@@ -10,7 +10,7 @@ let obstacleAmount = 0;
 let isEnemy = false;
 
 //#TODO
-let widthOffset = 60 * 2; //3 * player width
+let widthOffset = 110; //3 * player width
 let collectibleHeight = 91;
 let collectibleWidth = 50;
 let obstacleHeight = 100;
@@ -25,6 +25,12 @@ function HandleSpawning() {
 
     if (portalSpawned) return;
 
+    if (cont && obstacleAmount >= 4) {
+        cont = false;
+        obstacleAmount -= 4;
+    }
+
+
     spawnTimer += deltaTime;
     if (!isEnemy) spawnEnemyTimer += deltaTime;
 
@@ -34,7 +40,6 @@ function HandleSpawning() {
         SpawnCollectible();
     }
     else {
-        //the last object.y >= its.height / 4
         //#TODO: collectible * x?
         if (getLastCollectible().objectSprite.y >= collectibleHeight * 1.4) {
             SpawnCollectible();
@@ -43,9 +48,9 @@ function HandleSpawning() {
 
     //so amount of obstacles won't be greater than maximum
     //and they won't be spawned all by one time
-    if (obstacleAmount < currentMaxObstacleAmount && spawnTimer >= spawnTimerIncrease) {
+    if ((obstacleAmount < currentMaxObstacleAmount && spawnTimer >= spawnTimerIncrease)
+        || (obstacleAmount < minObstacleAmount && spawnTimer >= minSpawnTimer)) {
         SpawnObstacle();
-        spawnTimer = 0;
     }
 
     if (spawnEnemyTimer >= spawnEnemyTimerIncrease && isEnemy == false) {
@@ -66,10 +71,13 @@ function SpawnObstacle() {
     //to make sure than new obstacle won't collide with
     //other objects
     let x = SelectX();
+    if (x == -1) return;
 
     addQueue(x, 'obstacle');
     obstaclePreviousX = x;
     obstacleAmount++;
+
+   // console.log(obstacleAmount + " " + queueObstacle.length);
 }
 
 function SelectX() {
@@ -78,17 +86,18 @@ function SelectX() {
     do {
         x = Phaser.Math.Between(obstacleWidth, windowWidth - obstacleWidth);
         counter++;
-        if (counter >= 20) return;
+        if (counter >= 20) return -1;
     }
     while ((obstacleAmount > 0 && isTooClose(x, getLastObstacle().objectSprite.x) &&
         getLastObstacle().objectSprite.y <= obstacleHeight) ||
     (collectibleAmount > 0 && isTooClose(x, getLastCollectible().objectSprite.x)
-        && getLastCollectible().objectSprite.y <= collectibleHeight));
+        && getLastCollectible().objectSprite.y <= collectibleHeight / 2));
+    spawnTimer = 0;
     return x;
 }
 
 function isTooClose(x1, x2) {
-    return Math.abs(x1 - x2) < (widthOffset * 1.5);
+    return Math.abs(x1 - x2) < (widthOffset);
 }
 
 function SpawnCollectible() {

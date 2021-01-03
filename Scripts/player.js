@@ -7,7 +7,7 @@ function CreatePlayer(){
     //make sure the player is on top
     player.setDepth(1);
 
-    player.setBounce(0);
+    player.setBounce(0.01);
     //player won't go out from the borders
     player.setCollideWorldBounds(true);
 }

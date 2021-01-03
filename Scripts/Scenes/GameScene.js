@@ -78,7 +78,6 @@ class GameScene extends Phaser.Scene {
 
     }
     create(){
-
         this.playEntryAnimation = true;
         mainScene = this;
         this.lastTime = 0;
@@ -134,6 +133,7 @@ class GameScene extends Phaser.Scene {
         if(startGameOver && !transition.visible){
             startGameOver = false;
             this.scene.start("MainMenu")
+            this.scene.stop();
         }
     }
 
@@ -155,7 +155,7 @@ class GameScene extends Phaser.Scene {
             }
 
             if (event.key == "k" || event.key == "K") {
-                DestroyEnemy();
+                DestroyEnemy(true);
             }
 
         }, this);
