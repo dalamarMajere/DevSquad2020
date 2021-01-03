@@ -1,4 +1,5 @@
 let highscore = 0;
+let playMusic = true;
 class MainMenu extends Phaser.Scene {
 
     constructor() {
@@ -6,6 +7,9 @@ class MainMenu extends Phaser.Scene {
     }
 
     preload() {
+        this.load.audio('backgroundMusic','Assets/Sounds/backgroundLoop.mp3');
+        this.load.audio('buttonClick','Assets/Sounds/buttonClick.mp3');
+
         this.titleScreenImage = this.load.image('MainMenuText', 'Assets/MainMenu/MainMenuText.png');
         this.load.image('bg1', 'Assets/Grass/background.png');
         this.load.image('bg2', 'Assets/Lava/background.png');
@@ -65,16 +69,23 @@ class MainMenu extends Phaser.Scene {
         this.input.on('pointerdown',function(event){
             if(this.isHoveringPlay){
                 NewGame();
+                this.click.play();
                 game.scene.stop("MainMenu");
             }
-
             if(this.isHoveringQuestion){
+                this.click.play();
                 game.scene.start("HowToPlay");
                 game.scene.stop("MainMenu");
             }
         }, this);
+        //sound
+        this.music = this.sound.add('backgroundMusic');
+        this.music.loop = true;
+        this.music.volume = 0.5;
 
+        this.click = this.sound.add('buttonClick');
         //transition
+
         this.anims.create({
             key: 'transitionAnimation',
             frames: this.anims.generateFrameNames('transition', {
@@ -89,6 +100,10 @@ class MainMenu extends Phaser.Scene {
     }
 
     update(delta){
+        if(playMusic){
+            this.music.play();
+            playMusic = false;
+        }
         this.backgroundTimer += (delta - this.lastTime)/1000;
         this.lastTime = delta;
 

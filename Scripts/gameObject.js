@@ -33,10 +33,10 @@ class gameObject{
     MakeCollectable(x) {
         this.objectSprite = mainScene.physics.add.sprite(x, 0, currentCollectibleImage);
         mainScene.physics.add.overlap(player, this.objectSprite,
-                this.GetCollectible, null, this);
+            this.GetCollectible, null, this);
 
         mainScene.physics.add.collider(mainScene.ground, this.objectSprite,
-                                    this.DestroyCollectible, null, this);
+            this.DestroyCollectible, null, this);
 
         mainScene.anims.create({
             key: 'animation',
@@ -66,12 +66,14 @@ class gameObject{
 
     GetCollectible() {
         score += pointsForCollecting;
+        mainScene.drink.play();
         IncreaseEnergyLevel();
         this.DestroyCollectible();
     }
 
     CollisionWithPlayer() {
         //console.log("hit");
+        mainScene.hit.play();
         DecreaseEnergyLevel();
         this.DestroyObstacle();
     }
