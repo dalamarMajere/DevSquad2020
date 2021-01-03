@@ -32,10 +32,12 @@ let difficultyIncreaseTime = 1;
 
 //spawn
 let currentMaxObstacleAmount = 8;
-let spawnTimerIncrease = 4;
+let spawnTimerIncrease = 3;
 let spawnEnemyTimerIncrease = 10;
 
 let maxObstacleAmount = 12;
+let minObstacleAmount = 4;
+let minSpawnTimer = 0.5;
 
 let portalIncrease = 1;
 let portalSpawned = false;

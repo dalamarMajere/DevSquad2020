@@ -105,7 +105,7 @@ class GameScene extends Phaser.Scene {
         deltaTime = (time-this.lastTime)/1000;
         this.lastTime = time;
 
-        console.log(difficulty);
+
 
         //MovePlayer();
         MoveBackgroundOverTime();
@@ -149,7 +149,7 @@ class GameScene extends Phaser.Scene {
             }
 
             if (event.key == "k" || event.key == "K") {
-                DestroyEnemy();
+                DestroyEnemy(true);
             }
 
         }, this);

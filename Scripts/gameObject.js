@@ -9,7 +9,7 @@ class gameObject{
             case "enemy":
                 this.objectSprite = mainScene.physics.add.sprite(x, 0, currentEnemyImage);
                 mainScene.physics.add.collider(mainScene.ground, this.objectSprite,
-                    EnemyAttack, null, this);
+                    DestroyEnemy(false), null, this);
                 mainScene.physics.add.collider(player, this.objectSprite,
                     gameOver, null, this);
                 break;
@@ -58,7 +58,7 @@ class gameObject{
             case 2: this.objectSprite = mainScene.physics.add.sprite(x, 0, currentObstacle2Image); break;
             case 3: this.objectSprite = mainScene.physics.add.sprite(x, 0, currentObstacle3Image); break;
         }
-        mainScene.physics.add.collider(mainScene.ground, this.objectSprite,
+        mainScene.physics.add.overlap(mainScene.ground, this.objectSprite,
             this.DestroyObstacle, null, this);
         mainScene.physics.add.collider(player, this.objectSprite,
             this.CollisionWithPlayer, null, this);
@@ -71,13 +71,16 @@ class gameObject{
     }
 
     CollisionWithPlayer() {
+        //console.log("hit");
         DecreaseEnergyLevel();
         this.DestroyObstacle();
     }
 
     DestroyObstacle() {
+        //console.log("destroy");
         obstacleAmount--;
         deleteObstacle();
+        //console.log(obstacleAmount);
         this.Destroy();
     }
 
@@ -94,7 +97,7 @@ class gameObject{
     }
 }
 
-function DestroyEnemy() {
+function DestroyEnemy(win) {
     if (isEnemy) {
         isEnemy = false;
         for (let i = 0; i < queueObstacle.length; i++) {
@@ -103,10 +106,7 @@ function DestroyEnemy() {
                 queueObstacle.splice(i, 1);
             }
         }
-        score += pointsForEnemy;
+        if (win) score += pointsForEnemy;
+        else score -= pointsForEnemy;
     }
-}
-
-function EnemyAttack() {
-    score -= pointsForEnemy;
 }
