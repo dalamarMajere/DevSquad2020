@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="for merge">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/GameScene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/basicValues.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/basicValues.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/difficulty.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/difficulty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/energy.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/energy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/queue.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/queue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/spawner.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/spawner.js" afterDir="false" />
-    </list>
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="Created portal" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +90,7 @@
       <workItem from="1609425821728" duration="1882000" />
       <workItem from="1609436928119" duration="379000" />
       <workItem from="1609517653261" duration="3506000" />
-      <workItem from="1609580678589" duration="1938000" />
+      <workItem from="1609580678589" duration="2013000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -262,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609518072435</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Created portal">
+      <created>1609582671213</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1609582671213</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +300,8 @@
     <MESSAGE value="New assets" />
     <MESSAGE value="New Assets" />
     <MESSAGE value="QuickFix" />
-    <option name="LAST_COMMIT_MESSAGE" value="QuickFix" />
+    <MESSAGE value="Created portal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created portal" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
