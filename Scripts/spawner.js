@@ -12,9 +12,9 @@ let isEnemy = false;
 //#TODO
 let widthOffset = 60 * 2; //3 * player width
 let collectibleHeight = 91;
-let collectibleWidth = 40;
-let obstacleHeight = 115;
-let obstacleWidth = 70;
+let collectibleWidth = 50;
+let obstacleHeight = 100;
+let obstacleWidth = 115;
 
 //timer to spawn obstacles
 let spawnTimer = 0;
@@ -35,7 +35,8 @@ function HandleSpawning() {
     }
     else {
         //the last object.y >= its.height / 4
-        if (getLastCollectible().objectSprite.y >= collectibleHeight / 2) {
+        //#TODO: collectible * x?
+        if (getLastCollectible().objectSprite.y >= collectibleHeight * 1.4) {
             SpawnCollectible();
         }
     }
