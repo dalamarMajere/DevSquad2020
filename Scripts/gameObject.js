@@ -11,7 +11,7 @@ class gameObject{
                 mainScene.physics.add.collider(mainScene.ground, this.objectSprite,
                     DestroyEnemy(false), null, this);
                 mainScene.physics.add.collider(player, this.objectSprite,
-                    gameOver, null, this);
+                    GameOver, null, this);
                 break;
             case "obstacle":
                 this.MakeObstacle(x);

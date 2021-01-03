@@ -35,7 +35,7 @@ function IncreaseEnergyLevel() {
 
 function DecreaseEnergyLevel() {
     if (currentEnergyLevel === minFrame) {
-        gameOver();
+        GameOver();
     }
     else {
         currentEnergyLevel--;
@@ -46,8 +46,4 @@ function DecreaseEnergyLevel() {
 function GetCurrentFrame() {
 
     return currentEnergyLevel.toString() + frameSuffix;
-}
-
-function gameOver() {
-    GameOver();
 }

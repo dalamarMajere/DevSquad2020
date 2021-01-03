@@ -79,6 +79,7 @@ function NewGame() {
     difficulty = basicDifficulty;
     score = basicScore;
     portalSpawned = false;
+    isEnemy = false;
     GetNextTheme();
     game.scene.start('GameScene');
 }
