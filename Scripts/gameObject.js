@@ -51,6 +51,7 @@ class gameObject{
             frameRate: 5,
             repeat: -1
         });
+
         this.objectSprite.play(currentAnimation);
     }
 
@@ -104,8 +105,9 @@ class gameObject{
 
 function HitEnemy() {
     if (isEnemy) {
-        if(enemy.objectSprite.width <= Math.abs(player.x - enemy.objectSprite.x)) {
-            if(enemy.objectSprite.y > player.y - 2 * player.height) {
+        if(enemy.objectSprite.width >= Math.abs(player.x - enemy.objectSprite.x)) {
+            if(enemy.objectSprite.y >= player.y - player.height/2 - mainScene.attack.height*2.2) {
+                mainScene.enemyDeath.play();
                 isEnemy = false;
                 enemy.Destroy();
                 enemy = null;

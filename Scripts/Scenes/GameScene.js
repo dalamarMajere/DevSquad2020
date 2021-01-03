@@ -23,6 +23,10 @@ class GameScene extends Phaser.Scene {
         this.load.audio('hit','Assets/Sounds/hit.mp3');
         this.load.audio('drink','Assets/Sounds/drink.mp3');
         this.load.audio('gameover','Assets/Sounds/gameover.mp3');
+        this.load.audio('attack','Assets/Sounds/attack.mp3');
+        this.load.audio('enemyDeath','Assets/Sounds/enemyDeath.mp3');
+        this.load.audio('teleport','Assets/Sounds/teleport.mp3');
+
         //attack
         this.load.atlas('attack', 'Assets/attack.png', 'Assets/attack.json');
 
@@ -84,7 +88,8 @@ class GameScene extends Phaser.Scene {
         //attackanimation
         this.attack = this.add.sprite(0,0,'attack');
         this.attack.setOrigin(0,0);
-        this.attack.setDepth(player.depth);
+        this.attack.setDepth(player.depth-1);
+        this.attack.visible = false;
 
         this.anims.create({
             key: 'attackAnimation',
@@ -95,7 +100,7 @@ class GameScene extends Phaser.Scene {
             }),
             frameRate: 24,
             repeat: 0,
-            hideOnComplete: false
+            hideOnComplete: true
         });
 
         CreateBackground();
@@ -107,15 +112,16 @@ class GameScene extends Phaser.Scene {
         this.hit = this.sound.add('hit');
         this.drink = this.sound.add('drink');
         this.gameover = this.sound.add('gameover');
+        this.attackSound = this.sound.add('attack');
+        this.enemyDeath = this.sound.add('enemyDeath');
+        this.enemyDeath.volume = 2;
+        this.teleport = this.sound.add('teleport');
     }
 
     update(time) {
         //place attack sprite in front of the player;
-        this.attack.x = player.x;
+        this.attack.x = player.x - this.attack.width/2;
         this.attack.y = player.y - this.attack.height;
-
-
-        //this.attack.setFrame("0.png");
 
         if(this.playEntryAnimation){
             this.playEntryAnimation=false;
@@ -169,8 +175,12 @@ class GameScene extends Phaser.Scene {
             }
 
             if (event.key == "k" || event.key == "K") {
-                HitEnemy();
-                this.attack.play('attackAnimation');
+                if(!this.attack.visible){
+                    HitEnemy();
+                    this.attackSound.play();
+                    this.attack.visible = true;
+                    this.attack.play('attackAnimation');
+                }
             }
 
         }, this);

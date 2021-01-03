@@ -81,7 +81,7 @@ class MainMenu extends Phaser.Scene {
         //sound
         this.music = this.sound.add('backgroundMusic');
         this.music.loop = true;
-        this.music.volume = 0.5;
+        this.music.volume = 0.2;
 
         this.click = this.sound.add('buttonClick');
         //transition
