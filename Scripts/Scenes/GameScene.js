@@ -58,8 +58,23 @@ class GameScene extends Phaser.Scene {
 
         //scoreboard
         this.load.image('scoreboard','Assets/General/scoreboard.png');
+
+        //transition
+        this.anims.create({
+            key: 'transitionAnimation',
+            frames: this.anims.generateFrameNames('transition', {
+                start: 0,
+                end: 9,
+                suffix: '.png'
+            }),
+            frameRate: 24,
+            repeat: 0,
+            hideOnComplete: true
+        });
+
     }
     create(){
+        this.playEntryAnimation = true;
         mainScene = this;
         this.lastTime = 0;
 
@@ -73,15 +88,19 @@ class GameScene extends Phaser.Scene {
 
         CreatePlayer();
         CreateBackground();
-
-        //this.right = false;
-        //this.left = false;
         this.inputManager();
         CreateScore();
         CreateEnergy();
+
     }
 
     update(time) {
+        if(this.playEntryAnimation){
+            this.playEntryAnimation=false;
+            this.transition = this.add.sprite(windowWidth/2,windowHeight/2,'transition');
+            this.transition.setDepth(20);
+            this.transition.playReverse('transitionAnimation');
+        }
         //calculate DeltaTime
         deltaTime = (time-this.lastTime)/1000;
         this.lastTime = time;
@@ -99,6 +118,17 @@ class GameScene extends Phaser.Scene {
         moveQueueForward();
 
         energySprite.setFrame(GetCurrentFrame());
+
+        if(startNextLevel && !transition.visible){
+            startNextLevel = false;
+            this.scene.restart();
+        }
+
+        if(startGameOver && !transition.visible){
+            startGameOver = false;
+            this.scene.start("MainMenu")
+            this.scene.stop();
+        }
     }
 
 
@@ -109,15 +139,16 @@ class GameScene extends Phaser.Scene {
             if(event.key === "p"){
                 GameOver();
             }
-            if (event.key == "d") { //#TODO: right and left keys
+            if (event.key == "d" || event.key == "D") { //#TODO: right and left keys
                 MoveRight();
+
             }
 
-            if(event.key === "a"){
+            if(event.key === "a" || event.key == "A"){
                 MoveLeft();
             }
 
-            if (event.key == "q") {
+            if (event.key == "k" || event.key == "K") {
                 DestroyEnemy();
             }
 

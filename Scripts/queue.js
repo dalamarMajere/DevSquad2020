@@ -28,7 +28,6 @@ function addQueue(x, type) {
         queueCollectible.push(element);
     else {
         queueObstacle.push(element);
-        console.log(queueObstacle[queueObstacle.length - 1].objectType);
     }
 }
 

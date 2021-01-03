@@ -2,7 +2,7 @@ let basicTimer = 0;
 
 let basicEnergyFrame = 19;
 
-let basicDifficulty = 1;
+let basicDifficulty = 3;
 
 let basicCollectibleAmount = 0;
 let basicObstacleAmount = 0;
