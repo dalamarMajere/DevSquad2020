@@ -9,7 +9,7 @@ class gameObject{
             case "enemy":
                 this.objectSprite = mainScene.physics.add.sprite(x, 0, currentEnemyImage);
                 mainScene.physics.add.collider(mainScene.ground, this.objectSprite,
-                    DestroyEnemy(false), null, this);
+                    DestroyEnemy, null, this);
                 mainScene.physics.add.collider(player, this.objectSprite,
                     GameOver, null, this);
                 break;
@@ -21,6 +21,8 @@ class gameObject{
                 this.objectType = "unknown";
                 break;
         }
+
+        this.objectSprite.setDepth(10);
 
         if(this.objectType != "unknown"){
             this.objectSprite.y = -this.objectSprite.height;
@@ -100,14 +102,12 @@ class gameObject{
 }
 
 function DestroyEnemy(win) {
+    console.log('here');
     if (isEnemy) {
+        console.log('and here');
         isEnemy = false;
-        for (let i = 0; i < queueObstacle.length; i++) {
-            if (queueObstacle[i].objectType == 'enemy') {
-                queueObstacle[i].Destroy();
-                queueObstacle.splice(i, 1);
-            }
-        }
+        enemy.Destroy();
+        enemy = null;
         if (win) score += pointsForEnemy;
         else score -= pointsForEnemy;
     }

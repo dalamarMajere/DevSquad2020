@@ -88,6 +88,7 @@ class GameScene extends Phaser.Scene {
 
         this.ground = this.physics.add.sprite(0, windowHeight+200, 'ground');
         this.ground.setOrigin(0, 0);
+        this.ground.setBounce(0);
         this.ground.setDepth(10);
 
         CreatePlayer();
@@ -112,6 +113,8 @@ class GameScene extends Phaser.Scene {
         //calculate DeltaTime
         deltaTime = (time-this.lastTime)/1000;
         this.lastTime = time;
+
+        if (isEnemy) console.log(enemy.objectSprite.y);
 
         //MovePlayer();
         MoveBackgroundOverTime();

@@ -46,6 +46,8 @@ function CreatePortal() {
 
 function Continue() {
     portalSpawned = false;
+    portal.destroy();
+    mainScene.ground.setVelocity(0);
     cont = true;
 }
 

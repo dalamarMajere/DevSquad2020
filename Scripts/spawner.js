@@ -20,6 +20,8 @@ let obstacleWidth = 115;
 let spawnTimer = 0;
 let spawnEnemyTimer = 0;
 
+let enemy;
+
 
 function HandleSpawning() {
 
@@ -61,9 +63,11 @@ function HandleSpawning() {
 
 function SpawnEnemy() {
     let x = SelectX();
-    addQueue(x, 'enemy');
+    if (x == -1)
+        return;
+    enemy = new gameObject("enemy", x);
     isEnemy = true;
-    obstaclePreviousX = x;
+    //obstaclePreviousX = x;
 }
 
 function SpawnObstacle() {

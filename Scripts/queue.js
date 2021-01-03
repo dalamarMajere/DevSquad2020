@@ -39,6 +39,12 @@ function moveQueueForward() {
     for (let i of queueObstacle) {
         i.objectSprite.y += difficulty;
     }
+    if (isEnemy)
+        enemy.objectSprite.y += difficulty;
+
+
+
+    //if (enemy.y <= )
     /*if (portalSpawned)
         portal.y += difficulty;*/
 }
