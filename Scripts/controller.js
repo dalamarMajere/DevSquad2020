@@ -53,7 +53,9 @@ function Continue() {
 
 let startNextLevel = false;
 let transition;
+
 function NextLevel() {
+    mainScene.teleport.play();
     portalSpawned = false;
     RefreshEnergy();
     RefreshSpawner();

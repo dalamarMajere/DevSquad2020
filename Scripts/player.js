@@ -5,7 +5,7 @@ function CreatePlayer(){
     player = mainScene.physics.add.sprite(windowWidth/2, windowHeight,'player');
     player.x += player.height + 50;
     //make sure the player is on top
-    player.setDepth(1);
+    player.setDepth(3);
 
     player.setBounce(0.01);
     //player won't go out from the borders
