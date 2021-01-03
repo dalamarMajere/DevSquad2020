@@ -104,7 +104,7 @@ class gameObject{
 
 function HitEnemy() {
     if (isEnemy) {
-        if(enemy.objectSprite.x >= player.x - enemy.objectSprite.width  && enemy.objectSprite.x <= player.x + enemy.objectSprite.width) {
+        if(enemy.objectSprite.width <= Math.abs(player.x - enemy.objectSprite.x)) {
             if(enemy.objectSprite.y > player.y - 2 * player.height) {
                 isEnemy = false;
                 enemy.Destroy();

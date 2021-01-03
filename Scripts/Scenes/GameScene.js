@@ -65,18 +65,6 @@ class GameScene extends Phaser.Scene {
         //scoreboard
         this.load.image('scoreboard','Assets/General/scoreboard.png');
 
-        //transition
-        this.anims.create({
-            key: 'attackAnimation',
-            frames: this.anims.generateFrameNames('attack', {
-                start: 0,
-                end: 14,
-                suffix: '.png'
-            }),
-            frameRate: 24,
-            repeat: 0,
-            hideOnComplete: true
-        });
     }
     create(){
         this.playEntryAnimation = true;
@@ -98,6 +86,18 @@ class GameScene extends Phaser.Scene {
         this.attack.setOrigin(0,0);
         this.attack.setDepth(player.depth);
 
+        this.anims.create({
+            key: 'attackAnimation',
+            frames: this.anims.generateFrameNames('attack', {
+                start: 0,
+                end: 14,
+                suffix: '.png'
+            }),
+            frameRate: 24,
+            repeat: 0,
+            hideOnComplete: false
+        });
+
         CreateBackground();
         this.inputManager();
         CreateScore();
@@ -113,6 +113,9 @@ class GameScene extends Phaser.Scene {
         //place attack sprite in front of the player;
         this.attack.x = player.x;
         this.attack.y = player.y - this.attack.height;
+
+
+        //this.attack.setFrame("0.png");
 
         if(this.playEntryAnimation){
             this.playEntryAnimation=false;
@@ -185,3 +188,4 @@ class GameScene extends Phaser.Scene {
         }, this);
     }
 }
+
