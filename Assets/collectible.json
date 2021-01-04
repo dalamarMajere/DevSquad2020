@@ -8,7 +8,7 @@
     "duration": 100
    },
    "1.png": {
-    "frame": { "x": 0, "y": 93, "w": 43, "h": 93 },
+    "frame": { "x": 43, "y": 0, "w": 43, "h": 93 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 43, "h": 93 },
@@ -16,7 +16,7 @@
     "duration": 100
    },
    "2.png": {
-    "frame": { "x": 0, "y": 186, "w": 43, "h": 93 },
+    "frame": { "x": 86, "y": 0, "w": 43, "h": 93 },
     "rotated": false,
     "trimmed": false,
     "spriteSourceSize": { "x": 0, "y": 0, "w": 43, "h": 93 },
@@ -29,7 +29,7 @@
   "version": "1.2.25-x64",
   "image": "collectible.png",
   "format": "I8",
-  "size": { "w": 43, "h": 279 },
+  "size": { "w": 129, "h": 93 },
   "scale": "1",
   "frameTags": [
   ],
