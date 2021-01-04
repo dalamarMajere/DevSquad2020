@@ -92,8 +92,8 @@ function NewGame() {
 function SelectNextTheme() {
     let min = theme[0];
     let minIndx = [];
-    minIndx.push(1);
-    for (let i = 0; i < 4; i++) {
+    minIndx.push(0);
+    for (let i = 1; i < 4; i++) {
         if (min > theme[i]) {
             minIndx = [];
             minIndx.push(i);
