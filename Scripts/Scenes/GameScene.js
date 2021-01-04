@@ -155,7 +155,7 @@ class GameScene extends Phaser.Scene {
     {
         //while key is pressed
         this.input.keyboard.on('keydown',function(event){
-            if(event.key === "p" || event.key == "P"){
+            if(event.key === "p" || event.key == "Escape"){
                 GameOver();
             }
             if (event.key == "d" || event.key == "D") {

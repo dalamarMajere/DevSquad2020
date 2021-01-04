@@ -31,7 +31,7 @@ function HandleSpawning() {
 
     //if it's first call
     if (collectibleAmount === 0) {
-        collectiblePreviousX = Phaser.Math.Between(collectibleWidth, windowWidth - collectibleWidth);
+        collectiblePreviousX = Phaser.Math.Between(0, windowWidth - collectibleWidth);
         SpawnCollectible();
     }
     else {
@@ -78,7 +78,7 @@ function SelectX() {
     let x;
     let counter = 0;
     do {
-        x = Phaser.Math.Between(obstacleWidth, windowWidth - obstacleWidth);
+        x = Phaser.Math.Between(0, windowWidth - obstacleWidth);
         counter++;
         if (counter >= 20) return -1;
     }
@@ -105,7 +105,7 @@ function SpawnCollectible() {
     do {
         counter++;
         x =  Phaser.Math.Between(-3, 2) * collectibleDx + collectiblePreviousX;
-        x = Math.max(Math.min(x, windowWidth - widthOffset), widthOffset);
+        x = Math.max(Math.min(x, windowWidth - widthOffset), 0);
         if (counter >= 20) return;
     }
     while (/*x >= windowWidth - widthOffset || x < widthOffset / 2 ||*/
