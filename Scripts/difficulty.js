@@ -27,7 +27,6 @@ function IncreaseDifficultyOverTime()
     }
 
 
-   // console.log(difficulty / 2 + "Di/2");
     if ((difficulty / levelIncrease) >= portalIncrease) {
         portalIncrease++;
         CreatePortal();

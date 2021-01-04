@@ -2,7 +2,6 @@ let queueCollectible = [];
 let queueObstacle = [];
 let length;
 
-//FIFI: first in, first out
 
 function deleteObstacle() {
     queueObstacle.shift();
@@ -42,9 +41,4 @@ function moveQueueForward() {
     if (isEnemy)
         enemy.objectSprite.y += difficulty;
 
-
-
-    //if (enemy.y <= )
-    /*if (portalSpawned)
-        portal.y += difficulty;*/
 }

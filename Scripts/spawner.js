@@ -9,7 +9,6 @@ let obstacleAmount = 0;
 
 let isEnemy = false;
 
-//#TODO
 let widthOffset = 110; //3 * player width
 let collectibleHeight = 91;
 let collectibleWidth = 50;
@@ -27,12 +26,6 @@ function HandleSpawning() {
 
     if (portalSpawned) return;
 
-    if (cont && obstacleAmount >= 4) {
-        cont = false;
-        obstacleAmount -= 4;
-    }
-
-
     spawnTimer += deltaTime;
     if (!isEnemy) spawnEnemyTimer += deltaTime;
 
@@ -42,7 +35,6 @@ function HandleSpawning() {
         SpawnCollectible();
     }
     else {
-        //#TODO: collectible * x?
         if (getLastCollectible().objectSprite.y >= collectibleHeight * 1.4) {
             SpawnCollectible();
         }
@@ -80,8 +72,6 @@ function SpawnObstacle() {
     addQueue(x, 'obstacle');
     obstaclePreviousX = x;
     obstacleAmount++;
-
-   // console.log(obstacleAmount + " " + queueObstacle.length);
 }
 
 function SelectX() {
@@ -96,7 +86,8 @@ function SelectX() {
         getLastObstacle().objectSprite.y <= obstacleHeight) ||              //with obstacle
     (collectibleAmount > 0 && isTooClose(x, getLastCollectible().objectSprite.x)
         && getLastCollectible().objectSprite.y <= collectibleHeight / 2)  //with collectible
-       || (isEnemy && isTooClose(x, enemy.objectSprite.x) && enemy.objectSprite.y <= collectibleHeight / 2 ));                //with enemy
+       || (isEnemy && isTooClose(x, enemy.objectSprite.x) && enemy.objectSprite.y <= collectibleHeight / 2 ));
+                                                                                        //with enemy
     spawnTimer = 0;
     return x;
 }

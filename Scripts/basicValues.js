@@ -42,6 +42,5 @@ let minSpawnTimer = 0.5;
 let portalIncrease = 1;
 let portalSpawned = false;
 
-let musicOn = true;
 
 

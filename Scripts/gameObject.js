@@ -18,7 +18,6 @@ class gameObject{
                 this.MakeObstacle(x);
                 break;
             default:
-                console.log("No object of "+type+" type");
                 this.objectType = "unknown";
                 break;
         }
@@ -77,17 +76,14 @@ class gameObject{
     }
 
     CollisionWithPlayer() {
-        //console.log("hit");
         mainScene.hit.play();
         DecreaseEnergyLevel();
         this.DestroyObstacle();
     }
 
     DestroyObstacle() {
-        //console.log("destroy");
         obstacleAmount--;
         deleteObstacle();
-        //console.log(obstacleAmount);
         this.Destroy();
     }
 
@@ -100,7 +96,6 @@ class gameObject{
 
     Destroy(){
         this.objectSprite.destroy();
-        //#TODO: destroy the object itself, not only the sprite
     }
 }
 
@@ -109,9 +104,7 @@ function HitEnemy() {
         if(enemy.objectSprite.width >= Math.abs(player.x - enemy.objectSprite.x)) {
             if(enemy.objectSprite.y >= player.y - player.height/2 - mainScene.attack.height*2.2) {
                 mainScene.enemyDeath.play();
-                isEnemy = false;
-                enemy.Destroy();
-                enemy = null;
+                DestroyEnemy();
                 score += pointsForEnemy;
             }
         }

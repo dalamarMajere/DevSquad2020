@@ -1,5 +1,4 @@
-    let backgroundSprites = [];
-
+let backgroundSprites = [];
 
 function CreateBackground() {
     backgroundSprites = [];
@@ -18,7 +17,7 @@ function CreateBackground() {
         //increase the covered space
         coveredHeight += newBgSprite.height;
 
-    }while(coveredHeight < windowHeight)
+    } while(coveredHeight < windowHeight);
 }
 
 function MoveBackgroundOverTime() {
@@ -28,12 +27,12 @@ function MoveBackgroundOverTime() {
         return null;
 
     //move the background each frame
-    for(let i = 0 ; i < backgroundSprites.length;i++){
+    for(let i = 0 ; i < backgroundSprites.length;i++) {
         backgroundSprites[i].y += difficulty;
     }
 
     //if the last image rolls off the screen
-    if(backgroundSprites[backgroundSprites.length-1].y > windowHeight){
+    if(backgroundSprites[backgroundSprites.length-1].y > windowHeight) {
         //remove it from the end of the array
         let poppedSprite = backgroundSprites.pop();
         //change the sprites position to the first sprites position minus its height
