@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="QuickFix" />
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="quickFix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Scenes/MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scenes/MainMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +102,9 @@
       <workItem from="1609580678589" duration="1938000" />
       <workItem from="1609698331006" duration="103000" />
       <workItem from="1609708841826" duration="1156000" />
-      <workItem from="1609769818958" duration="992000" />
+      <workItem from="1609710262881" duration="20000" />
+      <workItem from="1609718827861" duration="610000" />
+      <workItem from="1609771805397" duration="4294000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -282,12 +288,12 @@
       <option name="project" value="LOCAL" />
       <updated>1609709958819</updated>
     </task>
-    <task id="LOCAL-00027" summary="QuickFix">
-      <created>1609770202210</created>
+    <task id="LOCAL-00027" summary="quickFix">
+      <created>1609710273161</created>
       <option name="number" value="00027" />
       <option name="presentableId" value="LOCAL-00027" />
       <option name="project" value="LOCAL" />
-      <updated>1609770202210</updated>
+      <updated>1609710273161</updated>
     </task>
     <option name="localTasksCounter" value="28" />
     <servers />
@@ -308,7 +314,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Commit" />
     <MESSAGE value="Fix" />
     <MESSAGE value="Obrazek" />
     <MESSAGE value="Image" />
@@ -328,12 +333,13 @@
     <MESSAGE value="Player Movement Revamp, deleted lane.js" />
     <MESSAGE value="New assets" />
     <MESSAGE value="New Assets" />
+    <MESSAGE value="QuickFix" />
     <MESSAGE value="Changed obstacles limits" />
     <MESSAGE value="sounds and player rotation upon moving" />
     <MESSAGE value="Fixed attacking the enemy" />
     <MESSAGE value="More sounds, and attack animation" />
-    <MESSAGE value="QuickFix" />
-    <option name="LAST_COMMIT_MESSAGE" value="QuickFix" />
+    <MESSAGE value="quickFix" />
+    <option name="LAST_COMMIT_MESSAGE" value="quickFix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
