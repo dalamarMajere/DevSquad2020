@@ -1,7 +1,8 @@
 let highscore = 0;
 let playMusic = true;
+let makeAudioSource = true;
 let audio = true;
-
+let music;
 class MainMenu extends Phaser.Scene {
 
     constructor() {
@@ -127,9 +128,13 @@ class MainMenu extends Phaser.Scene {
         this.highScore.y = this.sys.game.config.height / 2 - this.highScore.displayHeight * 3;
 
         //sound
-        this.music = this.sound.add('backgroundMusic');
-        this.music.loop = true;
-        this.music.volume = 0.2;
+        if(makeAudioSource){
+            makeAudioSource = false;
+            music = this.sound.add('backgroundMusic');
+            music.loop = true;
+            music.volume = 0.2;
+        }
+
         this.click = this.sound.add('buttonClick');
 
         //transition
@@ -149,7 +154,7 @@ class MainMenu extends Phaser.Scene {
     update(delta) {
         if(audio){
             if (playMusic) {
-                this.music.play();
+                music.play();
                 playMusic = false;
             }
         }
@@ -199,11 +204,11 @@ class MainMenu extends Phaser.Scene {
         if (audio) {
             audio = false;
             playMusic = true;
-            this.music.stop();
+            music.stop();
             this.audioButton.setTexture('audioInactiveHover');
         } else {
             audio = true;
-            this.music.play();
+            music.play();
             this.audioButton.setTexture('audioActiveHover');
         }
     }

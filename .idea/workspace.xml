@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="quickFix">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="68ff73bf-5f32-4b82-b37c-73cb8ca30eb1" name="Default Changelist" comment="new coffee asset" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +100,7 @@
       <workItem from="1609708841826" duration="1156000" />
       <workItem from="1609710262881" duration="20000" />
       <workItem from="1609718827861" duration="610000" />
-      <workItem from="1609771805397" duration="4294000" />
+      <workItem from="1609771805397" duration="5784000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1608579049534</created>
@@ -293,7 +291,28 @@
       <option name="project" value="LOCAL" />
       <updated>1609710273161</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Music Stop Button">
+      <created>1609776302970</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1609776302970</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Music Stop Button">
+      <created>1609776320235</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1609776320235</updated>
+    </task>
+    <task id="LOCAL-00030" summary="new coffee asset">
+      <created>1609777960313</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1609777960313</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,8 +331,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix" />
-    <MESSAGE value="Obrazek" />
     <MESSAGE value="Image" />
     <MESSAGE value="Added MainMenu" />
     <MESSAGE value="Rebuilt Main Menu to be modular and more efficient" />
@@ -337,7 +354,9 @@
     <MESSAGE value="Fixed attacking the enemy" />
     <MESSAGE value="More sounds, and attack animation" />
     <MESSAGE value="quickFix" />
-    <option name="LAST_COMMIT_MESSAGE" value="quickFix" />
+    <MESSAGE value="Music Stop Button" />
+    <MESSAGE value="new coffee asset" />
+    <option name="LAST_COMMIT_MESSAGE" value="new coffee asset" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

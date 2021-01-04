@@ -34,6 +34,7 @@ class gameObject{
     }
 
     MakeCollectable(x) {
+
         this.objectSprite = mainScene.physics.add.sprite(x, 0, currentCollectibleImage);
         mainScene.physics.add.overlap(player, this.objectSprite,
             this.GetCollectible, null, this);
